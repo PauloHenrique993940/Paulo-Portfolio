@@ -1,0 +1,36 @@
+.tech-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon-box i {
+  font-size: 3rem;
+  /* Tamanho dos ícones */
+}
+
+.tech-icon-box span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.tech-icon-box:hover {
+  transform: translateY(-10px);
+}
+
+.text-center {
+  text-align: center;
+}

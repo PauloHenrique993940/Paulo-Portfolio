@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -39,8 +40,11 @@
     <header class="hero" id="home">
         <div class="hero-content">
             <h4>Olá, eu sou o Paulo Henrique</h4>
-            <h1>Desenvolvedor <span>Front-End React</span> focado em UX/UI</h1>
-            <p>Graduando em Engenharia de Software e especialista em interfaces modernas, performáticas e acessíveis.
+            <h1>Desenvolvedor <span>Front-End React</span> focado em <span>interfaces modernas </span> e experiências do
+                <span>usuário </span>.
+            </h1 >
+            <p>Graduando em Engenharia de Software e especialista em interfaces modernas,
+            performáticas e acessíveis.
             </p>
             <div class="hero-btns">
                 <a href="#portfolio" class="btn-primary">Ver Projetos</a>
@@ -52,28 +56,79 @@
             <img src="https://github.com/PauloHenrique993940.png" alt="Paulo Henrique">
         </div>
     </header>
+    <section class="section tech-section" id="technologies">
+        <p class="subtitle text-center">Tecnologias</p>
+        <h2 class="section-title text-center">Meu Stack Tecnológico</h2>
+        <div class="tech-icons-container">
+            <div class="tech-icon-box" title="React">
+                <i class="devicon-react-original colored"></i>
+                <span>React</span>
+            </div>
+            <div class="tech-icon-box" title="TypeScript">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+            </div>
+            <div class="tech-icon-box" title="JavaScript">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-icon-box" title="Tailwind CSS">
+                <i class="devicon-tailwindcss-original colored"></i>
+                <span>Tailwind</span>
+            </div>
+            <div class="tech-icon-box" title="HTML5">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="tech-icon-box" title="CSS3">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="tech-icon-box" title="Git">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+            </div>
+            <div class="tech-icon-box" title="Vite">
+                <i class="devicon-vitejs-plain colored"></i>
+                <span>Vite</span>
+            </div>
+        </div>
+    </section>
 
     <section class="section" id="expertise">
         <p class="subtitle">Minhas Skills</p>
         <h2 class="section-title">Minha Expertise</h2>
         <div class="grid-expertise">
-            <div class="card-skill">
+            <div class="card-skill card-react">
                 <i class="fab fa-react"></i>
                 <h3>React & TS</h3>
-                <p>Criação de SPAs modernas utilizando Hooks, Context API e tipagem forte com TypeScript.</p>
+                <p>
+                    Construção de aplicações SPA escaláveis com React, aplicando Hooks avançados,
+                    Context API para gerenciamento de estado e TypeScript para segurança, padronização
+                    e manutenção de código em ambientes de médio e grande porte.
+                </p>
+
             </div>
-            <div class="card-skill">
+            <div class="card-skill card-mobile">
                 <i class="fas fa-mobile-alt"></i>
                 <h3>Mobile-First</h3>
-                <p>Interfaces responsivas com Tailwind CSS e Bootstrap, priorizando a experiência em dispositivos
-                    móveis.</p>
+                <p>
+                    Criação de interfaces responsivas com Tailwind CSS e Bootstrap,
+                    aplicando boas práticas de UI/UX e abordagem mobile-first
+                    para garantir performance e acessibilidade em diferentes dispositivos.
+                </p>
+
             </div>
-            <div class="card-skill">
+            <div class="card-skill card-arch">
                 <i class="fas fa-layer-group"></i>
                 <h3>Arquitetura</h3>
-                <p>Componentização modular, organização de pastas e integração com APIs REST.</p>
+                <p>
+                    Arquitetura frontend com componentização modular, separação de responsabilidades,
+                    organização escalável de pastas e integração com APIs REST seguindo boas práticas.
+                </p>
+
             </div>
-            <div class="card-skill">
+            <div class="card-skill card-ux">
                 <i class="fas fa-universal-access"></i>
                 <h3>UX/UI & Acessibilidade</h3>
                 <p>Foco em semântica, contraste e usabilidade seguindo as normas WCAG.</p>
@@ -83,15 +138,27 @@
 
     <section class="about" id="about">
         <div class="about-image">
-            <img src="https://github.com/PauloHenrique993940.png" alt="Sobre Mim" style="filter: grayscale(1);">
+            <img src="./src/assets/images/perfil/perfil.png" alt="Sobre Mim">
         </div>
         <div class="about-text">
             <p class="subtitle">Sobre</p>
             <h2>Quem é Paulo Henrique?</h2>
-            <p>Sou graduando em Engenharia de Software e pós-graduando em Desenvolvimento Front-End. Atuo na criação de
-                interfaces utilizando React, TypeScript e Tailwind CSS.</p>
-            <p>Com sólida experiência em PH Code Solutions, reduzi em 30% o tempo de carregamento de aplicações através
-                de otimizações de código e arquitetura modular.</p>
+            <p>
+                Sou graduando em Engenharia de Software e pós-graduando em Desenvolvimento Front-End, com foco na
+                construção
+                de interfaces modernas, acessíveis e altamente performáticas.
+                Atuo no desenvolvimento de aplicações utilizando React, TypeScript, JavaScript e Tailwind CSS,
+                aplicando boas práticas de componentização, arquitetura escalável e código limpo.
+                Tenho experiência com consumo de APIs REST, controle de estado com Context API,
+                versionamento com Git e integração de projetos utilizando Vite.
+                Durante minha atuação na PH Code Solutions, implementei otimizações de performance,
+                reduzindo em até 30% o tempo de carregamento das aplicações.
+                Trabalho com abordagem Mobile First, design responsivo e atenção aos detalhes de UX/UI,
+                seguindo padrões de acessibilidade e usabilidade.
+                Estou sempre em busca de evolução técnica, performance e qualidade de software,
+                entregando soluções eficientes e alinhadas às necessidades do negócio.
+            </p>
+
             <div class="education-tags">
                 <span>Eng. de Software</span>
                 <span>Pós Front-End</span>
@@ -113,7 +180,9 @@
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker">
                     <h3>Praforma Hack Labs</h3>
-                    <p>Uma plataforma completa e profissional para treinar habilidades de penetration testing, desenvolvida com React 18, Vite, TypeScript e design hacker premium.</p>
+                    <p> Plataforma educacional voltada para segurança da informação e penetration testing.
+                        Desenvolvida com React 18 e TypeScript, possui arquitetura escalável,
+                        UI temática profissional e foco em performance e organização de código.</p>
                     <div class="tech-stack">React • TypeScript • CSS • JavaScript • PowerShell • Batchfile </div>
                     <a href="https://plataforma-hacker.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -123,8 +192,9 @@
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear">
                     <h3>SyntaxWear</h3>
-                    <p>E-commerce moderno focado em performance e validação de dados, com formulários robustos usando
-                        React Hook Form + Zod e navegação fluida com TanStack Router.</p>
+                    <p>E-commerce moderno com foco em conversão, performance e validação de dados.
+                        Implementação de formulários robustos com React Hook Form + Zod
+                        e navegação fluida priorizando a experiência do usuário.</p>
                     <div class="tech-stack">TS • Tailwind • Zod</div>
                     <a href="https://syntax-wear-app.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -133,9 +203,10 @@
             <div class="portfolio-item">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kambab">
-                    <h3>Prataforma de Tarefa Kamban</h3>
-                    <p>Sistema de gerenciamento de tarefas no estilo Kanban, com persistência local, alternância de tema
-                        Dark/Light e foco total em produtividade e UX.</p>
+                    <h3>Kanban Task Manage</h3>
+                    <p>Sistema de gerenciamento de tarefas inspirado em Kanban,
+                        com persistência local, alternância de tema Dark/Light
+                        e foco em produtividade, usabilidade e organização visual e CRUD.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -145,18 +216,21 @@
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+
                     ">
-                    <h3>Diney+</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <h3>Disney+ UI Clone</h3>
+                    <p>Clone de interface inspirado no Disney+, desenvolvido para estudo avançado de UI,
+                        responsividade e fidelidade visual, seguindo padrões de plataformas de streaming.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
+                    <a href="https://clone-lime-iota.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/hero.png" alt="Praforma de tarefas kambab">
-                    <h3>Hero Carrosel</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <h3>Hero Carrousel</h3>
+                    <p>Componente reutilizável de carousel para landing pages,
+                        com transições suaves, controle automático e manual,
+                        focado em performance, UX e fácil reutilização.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -167,9 +241,10 @@
                     <img src="./src/assets/images/projects/marioFan.png" alt="Praforma de tarefas kambab">
                     <h3>Mario Bros — Fan Website</h3>
 
-                    <p>Site temático para fãs de Mario Bros, combinando animações, design interativo e navegação fluida
-                        para criar uma experiência divertida e imersiva.</p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
+                    <p>Website temático com animações e interações,
+                        focado em storytelling, navegação fluida
+                        e experiência imersiva para o usuário.</p>
+                    <div class="tech-stack">HTML5 • JavaScript • CSS3</div>
                     <a href="https://gta-react-site-8thn.vercel.app/#jogos" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
                 </div>
@@ -177,9 +252,11 @@
             <div class="portfolio-item">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/gibhi.png" alt="Praforma de tarefas kambab">
-                    <h3>Plataforma Ghibli</h3>
+                    <h3>Studio Ghibli Platform</h3>
 
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p> Aplicação web consumindo API externa para exibição dinâmica de conteúdos,
+                        com foco em componentização, organização de dados
+                        e identidade visual inspirada no universo cinematográfico.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -190,9 +267,10 @@
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep">
                     <h3>Buscador Cep</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p>Interface de alta performance para localização de logradouros, desenvolvida com React e Axios,
+                        focada em uma experiência de usuário fluida e tratamento rigoroso de dados assíncronos.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
+                    <a href="https://buscar-cep-nu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
@@ -208,8 +286,8 @@
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep">
-                    <h3>Buscador Cep</h3>
+                    <img src="./src/assets/images/projects/psicologia.png" alt="Buscador de Cep">
+                    <h3>Web Psicologia</h3>
                     <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
@@ -218,10 +296,54 @@
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep">
-                    <h3>Buscador Cep</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <img src="./src/assets/images/projects/advocacia.png" alt="Buscador de Cep">
+                    Law & Justice Solutions
+                    <p>Landing page institucional de alto padrão, focada em conversão e autoridade. Desenvolvida com
+                        design sóbrio, otimização de SEO e total responsividade para dispositivos móveis.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
+                    <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-info">
+                    <img src="./src/assets/images/projects/cafeteria.png" alt="Buscador de Cep">
+                    <h3>Site Café Aromas</h3>
+                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
+                    <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-info">
+                    <img src="./src/assets/images/projects/pousada.png" alt="Buscador de Cep">
+                    <h3>Pousada</h3>
+                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
+                    <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-info">
+                    <img src="./src/assets/images/projects/botflix.png" alt="Buscador de Cep">
+                    <h3>Botflix</h3>
+                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
+                    <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-info">
+                    <img src="./src/assets/images/projects/bot.png" alt="Cyberbot">
+                    <h3>Cyberbot </h3>
+                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
                 </div>
