@@ -239,7 +239,9 @@ body {
   color: var(--primary-color);
   margin-bottom: 20px;
 }
-
+.card-skill h3{
+  color: #1a202c;
+}
 /* About */
 .about {
   display: flex;
