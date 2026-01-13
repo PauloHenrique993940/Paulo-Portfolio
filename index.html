@@ -42,9 +42,9 @@
             <h4>Olá, eu sou o Paulo Henrique</h4>
             <h1>Desenvolvedor <span>Front-End React</span> focado em <span>interfaces modernas </span> e experiências do
                 <span>usuário </span>.
-            </h1 >
+            </h1>
             <p>Graduando em Engenharia de Software e especialista em interfaces modernas,
-            performáticas e acessíveis.
+                performáticas e acessíveis.
             </p>
             <div class="hero-btns">
                 <a href="#portfolio" class="btn-primary">Ver Projetos</a>
@@ -350,6 +350,23 @@
             </div>
         </div>
     </section>
+    <section class="section">
+        <h2 class="section-title">Código  em tempo Real.</h2>
+
+        <div class="section-cod">
+            <div class="code-container">
+                <div class="code-editor">
+                    <pre><code id="code-output"></code></pre>
+                </div>
+
+                <div class="code-result">
+                    <h4>Resultado:</h4>
+                    <div id="result-output"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <section class="contact" id="contact">
         <p class="subtitle">Vamos conversar?</p>
@@ -383,6 +400,89 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const codeText = `
+// Simulação de dados do funcionário
+const funcionario = {
+  nome: "Paulo Henrique",
+  cargo: "Front-End Developer",
+  salarioBase: 3000,
+  bonus: 800,
+  beneficios: ["Vale Refeição", "Plano de Saúde", "Home Office"]
+};
+
+// Funções de negócio
+function calcularSalarioBruto(salario, bonus) {
+  return salario + bonus;
+}
+
+function calcularImposto(valor) {
+  return valor * 0.15;
+}
+
+function calcularSalarioLiquido(bruto, imposto) {
+  return bruto - imposto;
+}
+
+// Processamento
+const salarioBruto = calcularSalarioBruto(
+  funcionario.salarioBase,
+  funcionario.bonus
+);
+
+const imposto = calcularImposto(salarioBruto);
+const salarioLiquido = calcularSalarioLiquido(salarioBruto, imposto);
+
+// Renderização do resultado
+const resultado = document.getElementById("result-output");
+
+resultado.innerHTML = \`
+  <h3>💼 Funcionário</h3>
+  <p><strong>Nome:</strong> \${funcionario.nome}</p>
+  <p><strong>Cargo:</strong> \${funcionario.cargo}</p>
+
+  <hr />
+
+  <p><strong>Salário Base:</strong> R$ \${funcionario.salarioBase}</p>
+  <p><strong>Bônus:</strong> R$ \${funcionario.bonus}</p>
+  <p><strong>Salário Bruto:</strong> R$ \${salarioBruto}</p>
+  <p><strong>Imposto (15%):</strong> R$ \${imposto}</p>
+
+  <h4>💰 Salário Líquido: R$ \${salarioLiquido}</h4>
+
+  <h4>🎁 Benefícios</h4>
+  <ul>
+    \${funcionario.beneficios.map(b => \`<li>\${b}</li>\`).join("")}
+  </ul>
+\`;
+
+// Log técnico
+console.log("Processamento concluído com sucesso 🚀");
+`;
+
+        const codeOutput = document.getElementById("code-output");
+        let index = 0;
+
+        function typeCode() {
+            if (index < codeText.length) {
+                codeOutput.textContent += codeText.charAt(index);
+                index++;
+                setTimeout(typeCode, 25);
+            } else {
+                runCode();
+            }
+        }
+
+        function runCode() {
+            try {
+                new Function(codeText)();
+            } catch (error) {
+                document.getElementById("result-output").innerText = error;
+            }
+        }
+
+        typeCode();
+    </script>
 </body>
 
 </html>
