@@ -1,4 +1,9 @@
+.section-cod{
+  display: flex;
+  width: 100%;
+  justify-content: center;
 
+}
 
 .code-container {
   display: grid;
