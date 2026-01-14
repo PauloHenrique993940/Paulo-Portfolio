@@ -11,13 +11,14 @@
     <meta name="keywords" content="Front-End, React, TypeScript, UX UI, Desenvolvedor Web" />
     <meta name="author" content="Paulo Henrique Ferreira França" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Paulo Henrique | Front-End React Developer" />
     <meta property="og:description" content="Interfaces modernas, acessíveis e performáticas com React e TypeScript." />
     <meta property="og:image" content="https://github.com/PauloHenrique993940.png" />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="./src/css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -38,7 +39,7 @@
     </nav>
 
     <header class="hero" id="home">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
             <h4>Olá, eu sou o Paulo Henrique</h4>
             <h1>Desenvolvedor <span>Front-End React</span> focado em <span>interfaces modernas </span> e experiências do
                 <span>usuário </span>.
@@ -52,43 +53,44 @@
                         class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" data-aos="zoom-in" data-aos-duration="1200">
             <img src="https://github.com/PauloHenrique993940.png" alt="Paulo Henrique">
         </div>
     </header>
-    <section class="section tech-section" id="technologies">
+
+    <section class="section tech-section" id="technologies" data-aos="fade-up">
         <p class="subtitle text-center">Tecnologias</p>
         <h2 class="section-title text-center">Meu Stack Tecnológico</h2>
         <div class="tech-icons-container">
-            <div class="tech-icon-box" title="React">
+            <div class="tech-icon-box" title="React" data-aos="flip-left" data-aos-delay="100">
                 <i class="devicon-react-original colored"></i>
                 <span>React</span>
             </div>
-            <div class="tech-icon-box" title="TypeScript">
+            <div class="tech-icon-box" title="TypeScript" data-aos="flip-left" data-aos-delay="200">
                 <i class="devicon-typescript-plain colored"></i>
                 <span>TypeScript</span>
             </div>
-            <div class="tech-icon-box" title="JavaScript">
+            <div class="tech-icon-box" title="JavaScript" data-aos="flip-left" data-aos-delay="300">
                 <i class="devicon-javascript-plain colored"></i>
                 <span>JavaScript</span>
             </div>
-            <div class="tech-icon-box" title="Tailwind CSS">
+            <div class="tech-icon-box" title="Tailwind CSS" data-aos="flip-left" data-aos-delay="400">
                 <i class="devicon-tailwindcss-original colored"></i>
                 <span>Tailwind</span>
             </div>
-            <div class="tech-icon-box" title="HTML5">
+            <div class="tech-icon-box" title="HTML5" data-aos="flip-left" data-aos-delay="500">
                 <i class="devicon-html5-plain colored"></i>
                 <span>HTML5</span>
             </div>
-            <div class="tech-icon-box" title="CSS3">
+            <div class="tech-icon-box" title="CSS3" data-aos="flip-left" data-aos-delay="600">
                 <i class="devicon-css3-plain colored"></i>
                 <span>CSS3</span>
             </div>
-            <div class="tech-icon-box" title="Git">
+            <div class="tech-icon-box" title="Git" data-aos="flip-left" data-aos-delay="700">
                 <i class="devicon-git-plain colored"></i>
                 <span>Git</span>
             </div>
-            <div class="tech-icon-box" title="Vite">
+            <div class="tech-icon-box" title="Vite" data-aos="flip-left" data-aos-delay="800">
                 <i class="devicon-vitejs-plain colored"></i>
                 <span>Vite</span>
             </div>
@@ -96,10 +98,10 @@
     </section>
 
     <section class="section" id="expertise">
-        <p class="subtitle">Minhas Skills</p>
-        <h2 class="section-title">Minha Expertise</h2>
+        <p class="subtitle" data-aos="fade-up">Minhas Skills</p>
+        <h2 class="section-title" data-aos="fade-up">Minha Expertise</h2>
         <div class="grid-expertise">
-            <div class="card-skill card-react">
+            <div class="card-skill card-react" data-aos="fade-up" data-aos-delay="100">
                 <i class="fab fa-react"></i>
                 <h3>React & TS</h3>
                 <p>
@@ -109,7 +111,7 @@
                 </p>
 
             </div>
-            <div class="card-skill card-mobile">
+            <div class="card-skill card-mobile" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-mobile-alt"></i>
                 <h3>Mobile-First</h3>
                 <p>
@@ -119,7 +121,7 @@
                 </p>
 
             </div>
-            <div class="card-skill card-arch">
+            <div class="card-skill card-arch" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-layer-group"></i>
                 <h3>Arquitetura</h3>
                 <p>
@@ -128,7 +130,7 @@
                 </p>
 
             </div>
-            <div class="card-skill card-ux">
+            <div class="card-skill card-ux" data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-universal-access"></i>
                 <h3>UX/UI & Acessibilidade</h3>
                 <p>Foco em semântica, contraste e usabilidade seguindo as normas WCAG.</p>
@@ -137,10 +139,10 @@
     </section>
 
     <section class="about" id="about">
-        <div class="about-image">
+        <div class="about-image" data-aos="fade-right">
             <img src="./src/assets/images/perfil/perfil.png" alt="Sobre Mim">
         </div>
-        <div class="about-text">
+        <div class="about-text" data-aos="fade-left">
             <p class="subtitle">Sobre</p>
             <h2>Quem é Paulo Henrique?</h2>
             <p>
@@ -160,15 +162,15 @@
             </p>
 
             <div class="education-tags">
-                <span>Eng. de Software</span>
-                <span>Pós Front-End</span>
-                <span>Top 50 FullStack</span>
+                <span data-aos="zoom-in" data-aos-delay="100">Eng. de Software</span>
+                <span data-aos="zoom-in" data-aos-delay="200">Pós Front-End</span>
+                <span data-aos="zoom-in" data-aos-delay="300">Top 50 FullStack</span>
             </div>
         </div>
     </section>
 
     <section class="section" id="portfolio">
-        <div class="portfolio-header">
+        <div class="portfolio-header" data-aos="fade-up">
             <div>
                 <p class="subtitle">Projetos Recentes</p>
                 <h2 class="section-title">Meu Portfolio</h2>
@@ -176,7 +178,7 @@
             <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-secondary">Ver Todo o GitHub</a>
         </div>
         <div class="grid-portfolio">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker">
                     <h3>Praforma Hack Labs</h3>
@@ -188,7 +190,8 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear">
                     <h3>SyntaxWear</h3>
@@ -200,7 +203,8 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kambab">
                     <h3>Kanban Task Manage</h3>
@@ -212,10 +216,10 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+
-                    ">
+                    <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+">
                     <h3>Disney+ UI Clone</h3>
                     <p>Clone de interface inspirado no Disney+, desenvolvido para estudo avançado de UI,
                         responsividade e fidelidade visual, seguindo padrões de plataformas de streaming.</p>
@@ -224,7 +228,8 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/hero.png" alt="Praforma de tarefas kambab">
                     <h3>Hero Carrousel</h3>
@@ -236,11 +241,11 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/marioFan.png" alt="Praforma de tarefas kambab">
                     <h3>Mario Bros — Fan Website</h3>
-
                     <p>Website temático com animações e interações,
                         focado em storytelling, navegação fluida
                         e experiência imersiva para o usuário.</p>
@@ -249,11 +254,11 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/gibhi.png" alt="Praforma de tarefas kambab">
                     <h3>Studio Ghibli Platform</h3>
-
                     <p> Aplicação web consumindo API externa para exibição dinâmica de conteúdos,
                         com foco em componentização, organização de dados
                         e identidade visual inspirada no universo cinematográfico.</p>
@@ -263,7 +268,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep">
                     <h3>Buscador Cep</h3>
@@ -274,7 +279,8 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/pokedexmapdev.png" alt="Buscador de Cep">
                     <h3>Pokédex Explorer</h3>
@@ -284,7 +290,8 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/psicologia.png" alt="Buscador de Cep">
                     <h3>Web Psicologia</h3>
@@ -294,10 +301,11 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/advocacia.png" alt="Buscador de Cep">
-                    Law & Justice Solutions
+                    <h3>Law & Justice Solutions</h3>
                     <p>Landing page institucional de alto padrão, focada em conversão e autoridade. Desenvolvida com
                         design sóbrio, otimização de SEO e total responsividade para dispositivos móveis.</p>
                     <div class="tech-stack">React • TS • Tailwind</div>
@@ -306,7 +314,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/cafeteria.png" alt="Buscador de Cep">
                     <h3>Site Café Aromas</h3>
@@ -317,7 +325,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/pousada.png" alt="Buscador de Cep">
                     <h3>Pousada</h3>
@@ -327,7 +335,8 @@
                             class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/botflix.png" alt="Buscador de Cep">
                     <h3>Botflix</h3>
@@ -338,7 +347,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
                     <img src="./src/assets/images/projects/bot.png" alt="Cyberbot">
                     <h3>Cyberbot </h3>
@@ -350,25 +359,26 @@
             </div>
         </div>
     </section>
-    <section class="section">
-        <h2 class="section-title">Código  em tempo Real.</h2>
 
-        <div class="section-cod">
-            <div class="code-container">
-                <div class="code-editor">
-                    <pre><code id="code-output"></code></pre>
+    <section class="section" data-aos="zoom-in">
+        <div class="code-container">
+            <div class="code-editor">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-title">demo.js</span>
                 </div>
-
-                <div class="code-result">
-                    <h4>Resultado:</h4>
-                    <div id="result-output"></div>
-                </div>
+                <pre><code id="code-output"></code></pre>
+            </div>
+            <div class="code-result">
+                <h4>Resultado</h4>
+                <div id="result-output"></div>
             </div>
         </div>
-
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
         <p class="subtitle">Vamos conversar?</p>
         <h2>Contato</h2>
         <p>Salvador – BA | (71) 99306-1316</p>
@@ -399,65 +409,48 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicialização do AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+
     <script src="script.js"></script>
     <script>
         const codeText = `
-// Simulação de dados do funcionário
 const funcionario = {
   nome: "Paulo Henrique",
   cargo: "Front-End Developer",
-  salarioBase: 3000,
+  salario: 3000,
   bonus: 800,
   beneficios: ["Vale Refeição", "Plano de Saúde", "Home Office"]
 };
 
-// Funções de negócio
-function calcularSalarioBruto(salario, bonus) {
-  return salario + bonus;
-}
+const bruto = funcionario.salario + funcionario.bonus;
+const imposto = bruto * 0.15;
+const liquido = bruto - imposto;
 
-function calcularImposto(valor) {
-  return valor * 0.15;
-}
+document.getElementById("result-output").innerHTML = \`
+  <h3>💼 \${funcionario.nome}</h3>
+  <p>\${funcionario.cargo}</p>
 
-function calcularSalarioLiquido(bruto, imposto) {
-  return bruto - imposto;
-}
+  <p>💵 Salário Base: R$ \${funcionario.salario}</p>
+  <p>➕ Bônus: R$ \${funcionario.bonus}</p>
+  <p>📊 Bruto: R$ \${bruto}</p>
+  <p>🏛️ Imposto (15%): R$ \${imposto}</p>
 
-// Processamento
-const salarioBruto = calcularSalarioBruto(
-  funcionario.salarioBase,
-  funcionario.bonus
-);
+  <h4>💰 Líquido: R$ \${liquido}</h4>
 
-const imposto = calcularImposto(salarioBruto);
-const salarioLiquido = calcularSalarioLiquido(salarioBruto, imposto);
-
-// Renderização do resultado
-const resultado = document.getElementById("result-output");
-
-resultado.innerHTML = \`
-  <h3>💼 Funcionário</h3>
-  <p><strong>Nome:</strong> \${funcionario.nome}</p>
-  <p><strong>Cargo:</strong> \${funcionario.cargo}</p>
-
-  <hr />
-
-  <p><strong>Salário Base:</strong> R$ \${funcionario.salarioBase}</p>
-  <p><strong>Bônus:</strong> R$ \${funcionario.bonus}</p>
-  <p><strong>Salário Bruto:</strong> R$ \${salarioBruto}</p>
-  <p><strong>Imposto (15%):</strong> R$ \${imposto}</p>
-
-  <h4>💰 Salário Líquido: R$ \${salarioLiquido}</h4>
-
-  <h4>🎁 Benefícios</h4>
   <ul>
     \${funcionario.beneficios.map(b => \`<li>\${b}</li>\`).join("")}
   </ul>
 \`;
 
-// Log técnico
-console.log("Processamento concluído com sucesso 🚀");
+console.log("OK 🚀");
 `;
 
         const codeOutput = document.getElementById("code-output");
@@ -467,7 +460,7 @@ console.log("Processamento concluído com sucesso 🚀");
             if (index < codeText.length) {
                 codeOutput.textContent += codeText.charAt(index);
                 index++;
-                setTimeout(typeCode, 25);
+                setTimeout(typeCode, 20);
             } else {
                 runCode();
             }
@@ -476,13 +469,12 @@ console.log("Processamento concluído com sucesso 🚀");
         function runCode() {
             try {
                 new Function(codeText)();
-            } catch (error) {
-                document.getElementById("result-output").innerText = error;
+            } catch (e) {
+                document.getElementById("result-output").innerText = e;
             }
         }
 
         typeCode();
     </script>
 </body>
-
 </html>
