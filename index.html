@@ -17,16 +17,16 @@
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="./src/css/styles.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-
     <nav class="navbar">
         <div class="logo">PH<span>.</span>Dev</div>
         <ul class="nav-links">
@@ -41,11 +41,14 @@
     <header class="hero" id="home">
         <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
             <h4>Olá, eu sou o Paulo Henrique</h4>
-            <h1>Desenvolvedor <span>Front-End React</span> focado em <span>interfaces modernas </span> e experiências do
+            <h1>
+                Desenvolvedor <span>Front-End React</span> focado em
+                <span>interfaces modernas </span> e experiências do
                 <span>usuário </span>.
             </h1>
-            <p>Graduando em Engenharia de Software e especialista em interfaces modernas,
-                performáticas e acessíveis.
+            <p>
+                Graduando em Engenharia de Software e especialista em interfaces
+                modernas, performáticas e acessíveis.
             </p>
             <div class="hero-btns">
                 <a href="#portfolio" class="btn-primary">Ver Projetos</a>
@@ -54,9 +57,55 @@
             </div>
         </div>
         <div class="hero-image" data-aos="zoom-in" data-aos-duration="1200">
-            <img src="https://github.com/PauloHenrique993940.png" alt="Paulo Henrique">
+            <img src="https://github.com/PauloHenrique993940.png" alt="Paulo Henrique" />
         </div>
     </header>
+    <section class="section metrics" id="metrics" data-aos="fade-up">
+        <p class="subtitle text-center">Resultados Reais</p>
+        <h2 class="section-title text-center">Impacto do Meu Trabalho</h2>
+
+        <div class="metrics-grid">
+            <div class="metric-card" data-aos="zoom-in">
+                <h3>⚡ Performance</h3>
+                <canvas id="performanceChart"></canvas>
+                <p>
+                    Otimizações reduziram o tempo de carregamento em até
+                    <strong>30%</strong>.
+                </p>
+            </div>
+
+            <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>🎯 UX & Acessibilidade</h3>
+                <canvas id="uxChart"></canvas>
+                <p>Interfaces com foco em usabilidade, WCAG e experiência fluida.</p>
+            </div>
+
+            <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>🛠 Qualidade de Código</h3>
+                <canvas id="qualityChart"></canvas>
+                <p>Arquitetura escalável, componentização e redução de bugs.</p>
+            </div>
+        </div>
+
+        <div class="metrics-stats">
+            <div class="stat-box" data-aos="fade-up">
+                <h4>+30%</h4>
+                <span>Performance</span>
+            </div>
+            <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+                <h4>95+</h4>
+                <span>Lighthouse</span>
+            </div>
+            <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+                <h4>-40%</h4>
+                <span>Bugs</span>
+            </div>
+            <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+                <h4>100%</h4>
+                <span>Responsivo</span>
+            </div>
+        </div>
+    </section>
 
     <section class="section tech-section" id="technologies" data-aos="fade-up">
         <p class="subtitle text-center">Tecnologias</p>
@@ -105,59 +154,61 @@
                 <i class="fab fa-react"></i>
                 <h3>React & TS</h3>
                 <p>
-                    Construção de aplicações SPA escaláveis com React, aplicando Hooks avançados,
-                    Context API para gerenciamento de estado e TypeScript para segurança, padronização
-                    e manutenção de código em ambientes de médio e grande porte.
+                    Construção de aplicações SPA escaláveis com React, aplicando Hooks
+                    avançados, Context API para gerenciamento de estado e TypeScript
+                    para segurança, padronização e manutenção de código em ambientes de
+                    médio e grande porte.
                 </p>
-
             </div>
             <div class="card-skill card-mobile" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-mobile-alt"></i>
                 <h3>Mobile-First</h3>
                 <p>
                     Criação de interfaces responsivas com Tailwind CSS e Bootstrap,
-                    aplicando boas práticas de UI/UX e abordagem mobile-first
-                    para garantir performance e acessibilidade em diferentes dispositivos.
+                    aplicando boas práticas de UI/UX e abordagem mobile-first para
+                    garantir performance e acessibilidade em diferentes dispositivos.
                 </p>
-
             </div>
             <div class="card-skill card-arch" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-layer-group"></i>
                 <h3>Arquitetura</h3>
                 <p>
-                    Arquitetura frontend com componentização modular, separação de responsabilidades,
-                    organização escalável de pastas e integração com APIs REST seguindo boas práticas.
+                    Arquitetura frontend com componentização modular, separação de
+                    responsabilidades, organização escalável de pastas e integração com
+                    APIs REST seguindo boas práticas.
                 </p>
-
             </div>
             <div class="card-skill card-ux" data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-universal-access"></i>
                 <h3>UX/UI & Acessibilidade</h3>
-                <p>Foco em semântica, contraste e usabilidade seguindo as normas WCAG.</p>
+                <p>
+                    Foco em semântica, contraste e usabilidade seguindo as normas WCAG.
+                </p>
             </div>
         </div>
     </section>
 
     <section class="about" id="about">
         <div class="about-image" data-aos="fade-right">
-            <img src="./src/assets/images/perfil/perfil.png" alt="Sobre Mim">
+            <img src="./src/assets/images/perfil/perfil.png" alt="Sobre Mim" />
         </div>
         <div class="about-text" data-aos="fade-left">
             <p class="subtitle">Sobre</p>
             <h2>Quem é Paulo Henrique?</h2>
             <p>
-                Sou graduando em Engenharia de Software e pós-graduando em Desenvolvimento Front-End, com foco na
-                construção
-                de interfaces modernas, acessíveis e altamente performáticas.
-                Atuo no desenvolvimento de aplicações utilizando React, TypeScript, JavaScript e Tailwind CSS,
-                aplicando boas práticas de componentização, arquitetura escalável e código limpo.
-                Tenho experiência com consumo de APIs REST, controle de estado com Context API,
-                versionamento com Git e integração de projetos utilizando Vite.
-                Durante minha atuação na PH Code Solutions, implementei otimizações de performance,
-                reduzindo em até 30% o tempo de carregamento das aplicações.
-                Trabalho com abordagem Mobile First, design responsivo e atenção aos detalhes de UX/UI,
-                seguindo padrões de acessibilidade e usabilidade.
-                Estou sempre em busca de evolução técnica, performance e qualidade de software,
+                Sou graduando em Engenharia de Software e pós-graduando em
+                Desenvolvimento Front-End, com foco na construção de interfaces
+                modernas, acessíveis e altamente performáticas. Atuo no
+                desenvolvimento de aplicações utilizando React, TypeScript, JavaScript
+                e Tailwind CSS, aplicando boas práticas de componentização,
+                arquitetura escalável e código limpo. Tenho experiência com consumo de
+                APIs REST, controle de estado com Context API, versionamento com Git e
+                integração de projetos utilizando Vite. Durante minha atuação na PH
+                Code Solutions, implementei otimizações de performance, reduzindo em
+                até 30% o tempo de carregamento das aplicações. Trabalho com abordagem
+                Mobile First, design responsivo e atenção aos detalhes de UX/UI,
+                seguindo padrões de acessibilidade e usabilidade. Estou sempre em
+                busca de evolução técnica, performance e qualidade de software,
                 entregando soluções eficientes e alinhadas às necessidades do negócio.
             </p>
 
@@ -180,12 +231,17 @@
         <div class="grid-portfolio">
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker">
+                    <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker" />
                     <h3>Praforma Hack Labs</h3>
-                    <p> Plataforma educacional voltada para segurança da informação e penetration testing.
-                        Desenvolvida com React 18 e TypeScript, possui arquitetura escalável,
-                        UI temática profissional e foco em performance e organização de código.</p>
-                    <div class="tech-stack">React • TypeScript • CSS • JavaScript • PowerShell • Batchfile </div>
+                    <p>
+                        Plataforma educacional voltada para segurança da informação e
+                        penetration testing. Desenvolvida com React 18 e TypeScript,
+                        possui arquitetura escalável, UI temática profissional e foco em
+                        performance e organização de código.
+                    </p>
+                    <div class="tech-stack">
+                        React • TypeScript • CSS • JavaScript • PowerShell • Batchfile
+                    </div>
                     <a href="https://plataforma-hacker.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
                 </div>
@@ -193,11 +249,14 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear">
+                    <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear" />
                     <h3>SyntaxWear</h3>
-                    <p>E-commerce moderno com foco em conversão, performance e validação de dados.
-                        Implementação de formulários robustos com React Hook Form + Zod
-                        e navegação fluida priorizando a experiência do usuário.</p>
+                    <p>
+                        E-commerce moderno com foco em conversão, performance e validação
+                        de dados. Implementação de formulários robustos com React Hook
+                        Form + Zod e navegação fluida priorizando a experiência do
+                        usuário.
+                    </p>
                     <div class="tech-stack">TS • Tailwind • Zod</div>
                     <a href="https://syntax-wear-app.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -206,11 +265,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kambab">
+                    <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kambab" />
                     <h3>Kanban Task Manage</h3>
-                    <p>Sistema de gerenciamento de tarefas inspirado em Kanban,
-                        com persistência local, alternância de tema Dark/Light
-                        e foco em produtividade, usabilidade e organização visual e CRUD.</p>
+                    <p>
+                        Sistema de gerenciamento de tarefas inspirado em Kanban, com
+                        persistência local, alternância de tema Dark/Light e foco em
+                        produtividade, usabilidade e organização visual e CRUD.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -219,10 +280,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+">
+                    <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+" />
                     <h3>Disney+ UI Clone</h3>
-                    <p>Clone de interface inspirado no Disney+, desenvolvido para estudo avançado de UI,
-                        responsividade e fidelidade visual, seguindo padrões de plataformas de streaming.</p>
+                    <p>
+                        Clone de interface inspirado no Disney+, desenvolvido para estudo
+                        avançado de UI, responsividade e fidelidade visual, seguindo
+                        padrões de plataformas de streaming.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://clone-lime-iota.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -231,11 +295,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/hero.png" alt="Praforma de tarefas kambab">
+                    <img src="./src/assets/images/projects/hero.png" alt="Praforma de tarefas kambab" />
                     <h3>Hero Carrousel</h3>
-                    <p>Componente reutilizável de carousel para landing pages,
-                        com transições suaves, controle automático e manual,
-                        focado em performance, UX e fácil reutilização.</p>
+                    <p>
+                        Componente reutilizável de carousel para landing pages, com
+                        transições suaves, controle automático e manual, focado em
+                        performance, UX e fácil reutilização.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -244,11 +310,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/marioFan.png" alt="Praforma de tarefas kambab">
+                    <img src="./src/assets/images/projects/marioFan.png" alt="Praforma de tarefas kambab" />
                     <h3>Mario Bros — Fan Website</h3>
-                    <p>Website temático com animações e interações,
-                        focado em storytelling, navegação fluida
-                        e experiência imersiva para o usuário.</p>
+                    <p>
+                        Website temático com animações e interações, focado em
+                        storytelling, navegação fluida e experiência imersiva para o
+                        usuário.
+                    </p>
                     <div class="tech-stack">HTML5 • JavaScript • CSS3</div>
                     <a href="https://gta-react-site-8thn.vercel.app/#jogos" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -257,11 +325,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/gibhi.png" alt="Praforma de tarefas kambab">
+                    <img src="./src/assets/images/projects/gibhi.png" alt="Praforma de tarefas kambab" />
                     <h3>Studio Ghibli Platform</h3>
-                    <p> Aplicação web consumindo API externa para exibição dinâmica de conteúdos,
-                        com foco em componentização, organização de dados
-                        e identidade visual inspirada no universo cinematográfico.</p>
+                    <p>
+                        Aplicação web consumindo API externa para exibição dinâmica de
+                        conteúdos, com foco em componentização, organização de dados e
+                        identidade visual inspirada no universo cinematográfico.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -270,10 +340,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep" />
                     <h3>Buscador Cep</h3>
-                    <p>Interface de alta performance para localização de logradouros, desenvolvida com React e Axios,
-                        focada em uma experiência de usuário fluida e tratamento rigoroso de dados assíncronos.</p>
+                    <p>
+                        Interface de alta performance para localização de logradouros,
+                        desenvolvida com React e Axios, focada em uma experiência de
+                        usuário fluida e tratamento rigoroso de dados assíncronos.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://buscar-cep-nu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -282,9 +355,12 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/pokedexmapdev.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/pokedexmapdev.png" alt="Buscador de Cep" />
                     <h3>Pokédex Explorer</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p>
+                        Gerenciador de tarefas com persistência em LocalStorage e tema
+                        Dark/Light.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://pokedex-uniti.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -293,9 +369,12 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/psicologia.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/psicologia.png" alt="Buscador de Cep" />
                     <h3>Web Psicologia</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p>
+                        Gerenciador de tarefas com persistência em LocalStorage e tema
+                        Dark/Light.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -304,10 +383,13 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/advocacia.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/advocacia.png" alt="Buscador de Cep" />
                     <h3>Law & Justice Solutions</h3>
-                    <p>Landing page institucional de alto padrão, focada em conversão e autoridade. Desenvolvida com
-                        design sóbrio, otimização de SEO e total responsividade para dispositivos móveis.</p>
+                    <p>
+                        Landing page institucional de alto padrão, focada em conversão e
+                        autoridade. Desenvolvida com design sóbrio, otimização de SEO e
+                        total responsividade para dispositivos móveis.
+                    </p>
                     <div class="tech-stack">React • TS • Tailwind</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -316,9 +398,12 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/cafeteria.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/cafeteria.png" alt="Buscador de Cep" />
                     <h3>Site Café Aromas</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p>
+                        Gerenciador de tarefas com persistência em LocalStorage e tema
+                        Dark/Light.
+                    </p>
                     <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -327,9 +412,12 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/pousada.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/pousada.png" alt="Buscador de Cep" />
                     <h3>Pousada</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p>
+                        Gerenciador de tarefas com persistência em LocalStorage e tema
+                        Dark/Light.
+                    </p>
                     <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -338,9 +426,12 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/botflix.png" alt="Buscador de Cep">
+                    <img src="./src/assets/images/projects/botflix.png" alt="Buscador de Cep" />
                     <h3>Botflix</h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <p>
+                        Gerenciador de tarefas com persistência em LocalStorage e tema
+                        Dark/Light.
+                    </p>
                     <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -349,9 +440,12 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/bot.png" alt="Cyberbot">
-                    <h3>Cyberbot </h3>
-                    <p>Gerenciador de tarefas com persistência em LocalStorage e tema Dark/Light.</p>
+                    <img src="./src/assets/images/projects/bot.png" alt="Cyberbot" />
+                    <h3>Cyberbot</h3>
+                    <p>
+                        Gerenciador de tarefas com persistência em LocalStorage e tema
+                        Dark/Light.
+                    </p>
                     <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
                     <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
                             class="fas fa-external-link-alt"></i></a>
@@ -385,8 +479,8 @@
 
         <form id="contact-form">
             <div class="form-group">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="E-mail" required>
+                <input type="text" placeholder="Nome" required />
+                <input type="email" placeholder="E-mail" required />
             </div>
             <textarea placeholder="Como posso ajudar no seu projeto?" rows="5"></textarea>
             <button type="submit" class="btn-submit">Enviar Mensagem</button>
@@ -403,7 +497,7 @@
                 <a href="mailto:paulohenriqueferreirafranca2@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-        <hr>
+        <hr />
         <div class="footer-bottom">
             <p>© 2024 Paulo Henrique Ferreira França. Salvador/BA.</p>
         </div>
@@ -415,7 +509,7 @@
         AOS.init({
             duration: 800,
             once: true,
-            offset: 100
+            offset: 100,
         });
     </script>
 
@@ -453,7 +547,7 @@ document.getElementById("result-output").innerHTML = \`
 console.log("OK 🚀");
 `;
 
-        const codeOutput = document.getElementById("code-output");
+        const codeOutput = document.getElementById('code-output');
         let index = 0;
 
         function typeCode() {
@@ -470,11 +564,142 @@ console.log("OK 🚀");
             try {
                 new Function(codeText)();
             } catch (e) {
-                document.getElementById("result-output").innerText = e;
+                document.getElementById('result-output').innerText = e;
             }
         }
 
         typeCode();
     </script>
+    <script>
+        const performanceChart = new Chart(
+            document.getElementById('performanceChart'),
+            {
+                type: 'bar',
+                data: {
+                    labels: ['Antes', 'Depois'],
+                    datasets: [
+                        {
+                            label: 'Tempo de Carregamento',
+                            data: [100, 70],
+                            backgroundColor: ['#ef4444', '#22c55e'],
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                },
+            }
+        );
+
+        const uxChart = new Chart(document.getElementById('uxChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Usabilidade', 'Acessibilidade', 'Design'],
+                datasets: [
+                    {
+                        data: [40, 35, 25],
+                        backgroundColor: ['#6366f1', '#22c55e', '#f59e0b'],
+                    },
+                ],
+            },
+        });
+
+        const qualityChart = new Chart(document.getElementById('qualityChart'), {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Arquitetura',
+                    'Legibilidade',
+                    'Manutenção',
+                    'Performance',
+                    'Escalabilidade',
+                ],
+                datasets: [
+                    {
+                        label: 'Qualidade',
+                        data: [90, 85, 88, 92, 87],
+                        backgroundColor: 'rgba(99,102,241,0.2)',
+                        borderColor: '#6366f1',
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: { display: false },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                    },
+                },
+            },
+        });
+    </script>
+    <script>
+        const performanceChart = new Chart(
+            document.getElementById('performanceChart'),
+            {
+                type: 'bar',
+                data: {
+                    labels: ['Antes', 'Depois'],
+                    datasets: [
+                        {
+                            label: 'Tempo de Carregamento',
+                            data: [100, 70],
+                            backgroundColor: ['#ef4444', '#22c55e'],
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                },
+            }
+        );
+
+        const uxChart = new Chart(document.getElementById('uxChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Usabilidade', 'Acessibilidade', 'Design'],
+                datasets: [
+                    {
+                        data: [40, 35, 25],
+                        backgroundColor: ['#6366f1', '#22c55e', '#f59e0b'],
+                    },
+                ],
+            },
+        });
+
+        const qualityChart = new Chart(document.getElementById('qualityChart'), {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Arquitetura',
+                    'Legibilidade',
+                    'Manutenção',
+                    'Performance',
+                    'Escalabilidade',
+                ],
+                datasets: [
+                    {
+                        label: 'Qualidade',
+                        data: [90, 85, 88, 92, 87],
+                        backgroundColor: 'rgba(99,102,241,0.2)',
+                        borderColor: '#6366f1',
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: { display: false },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                    },
+                },
+            },
+        });
+    </script>
 </body>
+
 </html>
