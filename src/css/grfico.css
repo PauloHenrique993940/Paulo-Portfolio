@@ -6,11 +6,12 @@
 }
 
 .metric-card {
-  background: #111;
+  background: linear-gradient(135deg, #1e1e2f, #2b2d42);
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .metric-card h3 {
