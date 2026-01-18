@@ -65,7 +65,40 @@ body {
 .nav-links li a:hover {
   color: var(--primary-color);
 }
+/* Estilização base do link */
+.nav-links li a {
+  position: relative;
+  /* Necessário para posicionar a linha em relação ao texto */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
+/* Criando a linha invisível */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  /* Começa com largura zero */
+  height: 2px;
+  /* Espessura da linha */
+  bottom: -5px;
+  /* Distância abaixo do texto */
+  left: 0;
+  background-color: var(--primary-color);
+  /* Usa a cor principal do seu tema */
+  transition: width 0.3s ease;
+  /* Faz a linha "crescer" suavemente */
+}
+
+/* Efeito ao passar o mouse */
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+  /* A linha expande para cobrir toda a largura do link */
+}
 .btn-contact-nav {
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
