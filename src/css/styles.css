@@ -127,12 +127,11 @@ body {
   justify-content: space-between;
   padding: 150px 10% 100px;
   /* Fundo Dark Premium com degradê radial sutil */
-  background: radial-gradient(circle at top right, #1a202c, #0a0c10);
+  background: #0f172a;
   gap: 60px;
   position: relative;
   overflow: hidden;
 }
-
 .hero::before {
   content: '';
   position: absolute;
@@ -164,7 +163,7 @@ body {
   font-size: clamp(2.5rem, 5vw, 4rem);
   /* Responsividade automática */
   line-height: 1.1;
-  color: #ffffff;
+  color: white;
   margin-bottom: 25px;
 }
 
