@@ -2,25 +2,25 @@
 
 /* Cores Específicas */
 .card-react {
-  --card-color: #61dafb;
+  --card-color: #06b6d4;
 }
 
-/* Azul React */
+/* Cyan */
 .card-mobile {
   --card-color: #a855f7;
 }
 
-/* Roxo Moderno */
+/* Roxo */
 .card-arch {
-  --card-color: #3fb950;
+  --card-color: #22c55e;
 }
 
-/* Verde Tech */
+/* Verde */
 .card-ux {
-  --card-color: #ff7b72;
+  --card-color: #f59e0b;
 }
 
-/* Coral/Rosa */
+/* Âmbar */
 
 /* Aplicação das Cores */
 .card-skill i {
@@ -56,10 +56,6 @@
   background: linear-gradient(90deg, transparent, var(--card-color), transparent);
   opacity: 0;
   transition: 0.3s;
-}
-
-.card-skill:hover::before {
-  opacity: 1;
 }
 
 .card-skill:hover::before {

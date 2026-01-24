@@ -1,34 +1,108 @@
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tech-category {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #6366f1;
+}
+
+.category-title {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .tech-icons-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0;
 }
 
 .tech-icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+  flex: 0 0 auto;
+  width: 100px;
 }
 
 .tech-icon-box i {
-  font-size: 3rem;
-  /* Tamanho dos ícones */
+  font-size: 2.5rem;
 }
 
 .tech-icon-box span {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #555;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
 }
 
 .tech-icon-box:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(135deg, #f1f5f9, #f8fafc);
+}
+
+.proficiency-bar {
+  width: 100%;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.proficiency-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.proficiency-advanced .proficiency-fill {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.proficiency-intermediate .proficiency-fill {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.tech-icon-box::before {
+  content: attr(title);
+  position: absolute;
+  background: #0f172a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  bottom: 100%;
+  margin-bottom: 8px;
+}
+
+.tech-icon-box:hover::before {
+  opacity: 1;
 }
 
 .text-center {

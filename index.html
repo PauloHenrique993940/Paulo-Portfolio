@@ -40,6 +40,13 @@
 
     <header class="hero" id="home">
         <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero-badges">
+                <div class="hero-badge">✨ Disponível para Oportunidades</div>
+                <div class="hero-opportunities">
+                    <span class="opp-badge internship">🎓 Estágio</span>
+                    <span class="opp-badge trainee">👨‍💼 Trainee Junior</span>
+                </div>
+            </div>
             <h4>Olá, eu sou o Paulo Henrique</h4>
             <h1>
                 Desenvolvedor <span>Front-End React</span> focado em
@@ -48,12 +55,14 @@
             </h1>
             <p>
                 Graduando em Engenharia de Software e especialista em interfaces
-                modernas, performáticas e acessíveis.
+                modernas, performáticas e acessíveis. Com experiência em React, TypeScript
+                e performance web.
             </p>
             <div class="hero-btns">
-                <a href="#portfolio" class="btn-primary">Ver Projetos</a>
-                <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-github"><i
-                        class="fab fa-github"></i> GitHub</a>
+                <a href="#portfolio" class="btn-primary">Explorar Projetos</a>
+                <a href="#contact" class="btn-contact">Iniciar Conversa</a>
+                <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-github" title="GitHub"><i
+                        class="fab fa-github"></i></a>
             </div>
         </div>
         <div class="hero-image" data-aos="zoom-in" data-aos-duration="1200">
@@ -110,38 +119,84 @@
     <section class="section tech-section" id="technologies" data-aos="fade-up">
         <p class="subtitle text-center">Tecnologias</p>
         <h2 class="section-title text-center">Meu Stack Tecnológico</h2>
-        <div class="tech-icons-container">
-            <div class="tech-icon-box" title="React" data-aos="flip-left" data-aos-delay="100">
-                <i class="devicon-react-original colored"></i>
-                <span>React</span>
+        
+        <div class="tech-categories">
+            <div class="tech-category" data-aos="fade-up">
+                <h3 class="category-title">Frontend Core</h3>
+                <div class="tech-icons-container">
+                    <div class="tech-icon-box proficiency-advanced" title="React - Avançado" data-aos="flip-left" data-aos-delay="100">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-advanced" title="TypeScript - Avançado" data-aos="flip-left" data-aos-delay="200">
+                        <i class="devicon-typescript-plain colored"></i>
+                        <span>TypeScript</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-advanced" title="JavaScript - Avançado" data-aos="flip-left" data-aos-delay="300">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-advanced" title="Tailwind CSS - Avançado" data-aos="flip-left" data-aos-delay="400">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                        <span>Tailwind</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 92%"></div></div>
+                    </div>
+                </div>
             </div>
-            <div class="tech-icon-box" title="TypeScript" data-aos="flip-left" data-aos-delay="200">
-                <i class="devicon-typescript-plain colored"></i>
-                <span>TypeScript</span>
+
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="category-title">Web Essentials</h3>
+                <div class="tech-icons-container">
+                    <div class="tech-icon-box proficiency-advanced" title="HTML5 - Avançado" data-aos="flip-left" data-aos-delay="500">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-advanced" title="CSS3 - Avançado" data-aos="flip-left" data-aos-delay="600">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 93%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-intermediate" title="Next.js - Intermediário" data-aos="flip-left" data-aos-delay="650">
+                        <i class="devicon-nextjs-plain colored"></i>
+                        <span>Next.js</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 75%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-intermediate" title="Bootstrap - Intermediário" data-aos="flip-left" data-aos-delay="700">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 80%"></div></div>
+                    </div>
+                </div>
             </div>
-            <div class="tech-icon-box" title="JavaScript" data-aos="flip-left" data-aos-delay="300">
-                <i class="devicon-javascript-plain colored"></i>
-                <span>JavaScript</span>
-            </div>
-            <div class="tech-icon-box" title="Tailwind CSS" data-aos="flip-left" data-aos-delay="400">
-                <i class="devicon-tailwindcss-original colored"></i>
-                <span>Tailwind</span>
-            </div>
-            <div class="tech-icon-box" title="HTML5" data-aos="flip-left" data-aos-delay="500">
-                <i class="devicon-html5-plain colored"></i>
-                <span>HTML5</span>
-            </div>
-            <div class="tech-icon-box" title="CSS3" data-aos="flip-left" data-aos-delay="600">
-                <i class="devicon-css3-plain colored"></i>
-                <span>CSS3</span>
-            </div>
-            <div class="tech-icon-box" title="Git" data-aos="flip-left" data-aos-delay="700">
-                <i class="devicon-git-plain colored"></i>
-                <span>Git</span>
-            </div>
-            <div class="tech-icon-box" title="Vite" data-aos="flip-left" data-aos-delay="800">
-                <i class="devicon-vitejs-plain colored"></i>
-                <span>Vite</span>
+
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="category-title">Tools & DevOps</h3>
+                <div class="tech-icons-container">
+                    <div class="tech-icon-box proficiency-advanced" title="Git - Avançado" data-aos="flip-left" data-aos-delay="700">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-advanced" title="Vite - Avançado" data-aos="flip-left" data-aos-delay="800">
+                        <i class="devicon-vitejs-plain colored"></i>
+                        <span>Vite</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 88%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-intermediate" title="GitHub - Intermediário" data-aos="flip-left" data-aos-delay="850">
+                        <i class="devicon-github-original colored"></i>
+                        <span>GitHub</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%"></div></div>
+                    </div>
+                    <div class="tech-icon-box proficiency-intermediate" title="Vercel - Intermediário" data-aos="flip-left" data-aos-delay="900">
+                        <i class="devicon-vercel-original colored"></i>
+                        <span>Vercel</span>
+                        <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -217,6 +272,63 @@
                 <span data-aos="zoom-in" data-aos-delay="100">Eng. de Software</span>
                 <span data-aos="zoom-in" data-aos-delay="200">Pós Front-End</span>
                 <span data-aos="zoom-in" data-aos-delay="300">Top 50 FullStack</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section featured-projects" id="featured" data-aos="fade-up">
+        <div class="featured-header" data-aos="fade-up">
+            <div>
+                <p class="subtitle">Destaque</p>
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <p class="featured-subtitle">Os melhores projetos que demonstram minhas habilidades</p>
+            </div>
+        </div>
+        <div class="featured-grid">
+            <div class="featured-card featured-main" data-aos="fade-up">
+                <div class="featured-badge">⭐ MAIS POPULAR</div>
+                <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker" />
+                <div class="featured-content">
+                    <h3>Plataforma Hack Labs</h3>
+                    <p>Plataforma educacional com arquitetura escalável, UI profissional e foco em performance</p>
+                    <div class="tech-stack">React 18 • TypeScript • CSS • Performance</div>
+                    <div class="featured-stats">
+                        <span>🚀 Performance</span>
+                        <span>💻 Responsivo</span>
+                        <span>✨ Premium UI</span>
+                    </div>
+                    <a href="https://plataforma-hacker.vercel.app/" target="_blank" class="featured-link">Explorar Projeto <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="featured-badge secondary">💡 INOVADOR</div>
+                <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear" />
+                <div class="featured-content">
+                    <h3>SyntaxWear</h3>
+                    <p>E-commerce moderno com validação robusta e experiência otimizada</p>
+                    <div class="tech-stack">TypeScript • Tailwind • Zod</div>
+                    <div class="featured-stats">
+                        <span>📦 E-commerce</span>
+                        <span>✅ Validação</span>
+                    </div>
+                    <a href="https://syntax-wear-app.vercel.app/" target="_blank" class="featured-link">Explorar Projeto <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="featured-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="featured-badge secondary">🎯 PRODUTIVIDADE</div>
+                <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kanban" />
+                <div class="featured-content">
+                    <h3>Kanban Task Manager</h3>
+                    <p>Sistema de gerenciamento com persistência local e tema Dark/Light</p>
+                    <div class="tech-stack">React • TypeScript • Tailwind</div>
+                    <div class="featured-stats">
+                        <span>📋 CRUD</span>
+                        <span>🌓 Dark Mode</span>
+                    </div>
+                    <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank" class="featured-link">Explorar Projeto <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -473,24 +585,6 @@
         </div>
     </section>
 
-    <section class="section" data-aos="zoom-in">
-        <div class="code-container">
-            <div class="code-editor">
-                <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="code-title">demo.js</span>
-                </div>
-                <pre><code id="code-output"></code></pre>
-            </div>
-            <div class="code-result">
-                <h4>Resultado</h4>
-                <div id="result-output"></div>
-            </div>
-        </div>
-    </section>
-
     <section class="contact" id="contact" data-aos="fade-up">
         <p class="subtitle">Vamos conversar?</p>
         <h2>Contato</h2>
@@ -533,127 +627,6 @@
     </script>
 
     <script src="script.js"></script>
-    <script>
-        const codeText = `
-const funcionario = {
-  nome: "Paulo Henrique",
-  cargo: "Front-End Developer",
-  salario: 3000,
-  bonus: 800,
-  beneficios: ["Vale Refeição", "Plano de Saúde", "Home Office"]
-};
-
-const bruto = funcionario.salario + funcionario.bonus;
-const imposto = bruto * 0.15;
-const liquido = bruto - imposto;
-
-document.getElementById("result-output").innerHTML = \`
-  <h3>💼 \${funcionario.nome}</h3>
-  <p>\${funcionario.cargo}</p>
-
-  <p>💵 Salário Base: R$ \${funcionario.salario}</p>
-  <p>➕ Bônus: R$ \${funcionario.bonus}</p>
-  <p>📊 Bruto: R$ \${bruto}</p>
-  <p>🏛️ Imposto (15%): R$ \${imposto}</p>
-
-  <h4>💰 Líquido: R$ \${liquido}</h4>
-
-  <ul>
-    \${funcionario.beneficios.map(b => \`<li>\${b}</li>\`).join("")}
-  </ul>
-\`;
-
-console.log("OK 🚀");
-`;
-
-        const codeOutput = document.getElementById('code-output');
-        let index = 0;
-
-        function typeCode() {
-            if (index < codeText.length) {
-                codeOutput.textContent += codeText.charAt(index);
-                index++;
-                setTimeout(typeCode, 20);
-            } else {
-                runCode();
-            }
-        }
-
-        function runCode() {
-            try {
-                new Function(codeText)();
-            } catch (e) {
-                document.getElementById('result-output').innerText = e;
-            }
-        }
-
-        typeCode();
-    </script>
-    <script>
-        const performanceChart = new Chart(
-            document.getElementById('performanceChart'),
-            {
-                type: 'bar',
-                data: {
-                    labels: ['Antes', 'Depois'],
-                    datasets: [
-                        {
-                            label: 'Tempo de Carregamento',
-                            data: [100, 70],
-                            backgroundColor: ['#ef4444', '#22c55e'],
-                        },
-                    ],
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                },
-            }
-        );
-
-        const uxChart = new Chart(document.getElementById('uxChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Usabilidade', 'Acessibilidade', 'Design'],
-                datasets: [
-                    {
-                        data: [40, 35, 25],
-                        backgroundColor: ['#6366f1', '#22c55e', '#f59e0b'],
-                    },
-                ],
-            },
-        });
-
-        const qualityChart = new Chart(document.getElementById('qualityChart'), {
-            type: 'radar',
-            data: {
-                labels: [
-                    'Arquitetura',
-                    'Legibilidade',
-                    'Manutenção',
-                    'Performance',
-                    'Escalabilidade',
-                ],
-                datasets: [
-                    {
-                        label: 'Qualidade',
-                        data: [90, 85, 88, 92, 87],
-                        backgroundColor: 'rgba(99,102,241,0.2)',
-                        borderColor: '#6366f1',
-                    },
-                ],
-            },
-            options: {
-                scales: {
-                    r: {
-                        angleLines: { display: false },
-                        suggestedMin: 0,
-                        suggestedMax: 100,
-                    },
-                },
-            },
-        });
-    </script>
     <script>
         const performanceChart = new Chart(
             document.getElementById('performanceChart'),
