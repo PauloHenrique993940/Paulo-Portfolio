@@ -783,7 +783,7 @@ body {
 
 .portfolio-info {
   padding: 30px;
-  width: 425px;
+  width: 100%;
   position: relative;
   z-index: 2;
 }
