@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -21,6 +21,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Comic+Neue:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -35,673 +38,705 @@
             <li><a href="#about">Sobre</a></li>
             <li><a href="#portfolio">Projetos</a></li>
         </ul>
+        <button id="theme-toggle" class="btn-theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
         <a href="mailto:paulohenriqueferreirafranca2@gmail.com" class="btn-contact-nav">Contrate-me</a>
     </nav>
 
-    <header class="hero" id="home">
-        <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-            <div class="hero-badges">
-                <div class="hero-badge">Disponível para Oportunidades</div>
-                <div class="hero-opportunities">
-                    <span class="opp-badge internship">🎓 Estágio</span>
-                    <span class="opp-badge trainee">👨‍💼 Trainee Junior</span>
-                </div>
-            </div>
-            <h4>Olá, eu sou o Paulo Henrique</h4>
-            <h1>
-                Desenvolvedor <span>Front-End React</span> focado em
-                <span>interfaces modernas </span> e experiências do
-                <span>usuário</span>.
-            </h1>
-            <p>
-                Graduando em Engenharia de Software e especialista em interfaces
-                modernas, performáticas e acessíveis. Com experiência em React, TypeScript
-                e performance web.
-            </p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="btn-primary">Explorar Projetos</a>
-                <a href="#contact" class="btn-contact">Iniciar Conversa</a>
-                <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-github" title="GitHub"><i
-                        class="fab fa-github"></i></a>
-            </div>
-        </div>
-        <div class="hero-image" data-aos="zoom-in" data-aos-duration="1200">
-            <img src="https://github.com/PauloHenrique993940.png" alt="Paulo Henrique" />
-        </div>
-    </header>
-    <section class="section metrics" id="metrics" data-aos="fade-up">
-        <p class="subtitle text-center">Resultados Reais</p>
-        <h2 class="section-title text-center">Impacto do Meu Trabalho</h2>
-
-        <div class="metrics-grid">
-            <div class="metric-card" data-aos="zoom-in">
-                <h3>⚡ Performance</h3>
-                <canvas id="performanceChart"></canvas>
-                <p>
-                    Otimizações reduziram o tempo de carregamento em até
-                    <strong>30%</strong>.
+    <div class="comic-chapter chapter-intro">
+        <header class="hero comic-panel" id="home">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <h4 class="speech-bubble">Olá, eu sou o Paulo Henrique</h4>
+                <h1>
+                    Desenvolvedor <span>Front-End React</span> focado em
+                    <span>interfaces modernas </span> e experiências do
+                    <span>usuário</span>.
+                </h1>
+                <p class="speech-bubble">
+                    Graduando em Engenharia de Software e especialista em interfaces
+                    modernas, performáticas e acessíveis. Com experiência em React, TypeScript
+                    e performance web.
                 </p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn-primary">Explorar Projetos</a>
+                    <a href="#contact" class="btn-contact">Iniciar Conversa</a>
+                    <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-github"
+                        title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="zoom-in" data-aos-duration="1200">
+                <img src="https://github.com/PauloHenrique993940.png" alt="Paulo Henrique" />
+            </div>
+        </header>
+    </div>
+    <div class="comic-chapter chapter-metrics">
+        <section class="section metrics comic-panel" id="metrics" data-aos="fade-up">
+            <p class="subtitle text-center speech-bubble">Resultados Reais</p>
+            <h2 class="section-title text-center speech-bubble">Impacto do Meu Trabalho</h2>
+
+            <div class="metrics-grid">
+                <div class="metric-card" data-aos="zoom-in">
+                    <h3>⚡ Performance</h3>
+                    <canvas id="performanceChart"></canvas>
+                    <p class="speech-bubble">
+                        Otimizações reduziram o tempo de carregamento em até
+                        <strong>30%</strong>.
+                    </p>
+                </div>
+
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>🎯 UX & Acessibilidade</h3>
+                    <canvas id="uxChart"></canvas>
+                    <p class="speech-bubble">Interfaces com foco em usabilidade, WCAG e experiência fluida.</p>
+                </div>
+
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>🛠 Qualidade de Código</h3>
+                    <canvas id="qualityChart"></canvas>
+                    <p class="speech-bubble">Arquitetura escalável, componentização e redução de bugs.</p>
+                </div>
             </div>
 
-            <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
-                <h3>🎯 UX & Acessibilidade</h3>
-                <canvas id="uxChart"></canvas>
-                <p>Interfaces com foco em usabilidade, WCAG e experiência fluida.</p>
+            <div class="metrics-stats">
+                <div class="stat-box" data-aos="fade-up">
+                    <h4>+30%</h4>
+                    <span>Performance</span>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+                    <h4>95+</h4>
+                    <span>Lighthouse</span>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+                    <h4>-40%</h4>
+                    <span>Bugs</span>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+                    <h4>100%</h4>
+                    <span>Responsivo</span>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
-                <h3>🛠 Qualidade de Código</h3>
-                <canvas id="qualityChart"></canvas>
-                <p>Arquitetura escalável, componentização e redução de bugs.</p>
-            </div>
-        </div>
+    <div class="comic-chapter chapter-tech">
+        <section class="section tech-section comic-panel" id="technologies" data-aos="fade-up">
+            <p class="subtitle text-center speech-bubble">Tecnologias</p>
+            <h2 class="section-title text-center speech-bubble">Meu Stack Tecnológico</h2>
 
-        <div class="metrics-stats">
-            <div class="stat-box" data-aos="fade-up">
-                <h4>+30%</h4>
-                <span>Performance</span>
-            </div>
-            <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
-                <h4>95+</h4>
-                <span>Lighthouse</span>
-            </div>
-            <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
-                <h4>-40%</h4>
-                <span>Bugs</span>
-            </div>
-            <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
-                <h4>100%</h4>
-                <span>Responsivo</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="section tech-section" id="technologies" data-aos="fade-up">
-        <p class="subtitle text-center">Tecnologias</p>
-        <h2 class="section-title text-center">Meu Stack Tecnológico</h2>
-
-        <div class="tech-categories">
-            <div class="tech-category" data-aos="fade-up">
-                <h3 class="category-title">Frontend Core</h3>
-                <div class="tech-icons-container">
-                    <div class="tech-icon-box proficiency-advanced" title="React - Avançado" data-aos="flip-left"
-                        data-aos-delay="100">
-                        <i class="devicon-react-original colored"></i>
-                        <span>React</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 95%"></div>
+            <div class="tech-categories">
+                <div class="tech-category" data-aos="fade-up">
+                    <h3 class="category-title">Frontend Core</h3>
+                    <div class="tech-icons-container">
+                        <div class="tech-icon-box proficiency-advanced" title="React - Avançado" data-aos="flip-left"
+                            data-aos-delay="100">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="TypeScript - Avançado"
+                            data-aos="flip-left" data-aos-delay="200">
+                            <i class="devicon-typescript-plain colored"></i>
+                            <span>TypeScript</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="JavaScript - Avançado"
+                            data-aos="flip-left" data-aos-delay="300">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="Tailwind CSS - Avançado"
+                            data-aos="flip-left" data-aos-delay="400">
+                            <i class="devicon-tailwindcss-original colored"></i>
+                            <span>Tailwind</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 92%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tech-icon-box proficiency-advanced" title="TypeScript - Avançado" data-aos="flip-left"
-                        data-aos-delay="200">
-                        <i class="devicon-typescript-plain colored"></i>
-                        <span>TypeScript</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 90%"></div>
+                </div>
+
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">Web Essentials</h3>
+                    <div class="tech-icons-container">
+                        <div class="tech-icon-box proficiency-advanced" title="HTML5 - Avançado" data-aos="flip-left"
+                            data-aos-delay="500">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="CSS3 - Avançado" data-aos="flip-left"
+                            data-aos-delay="600">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="SASS - Avançado" data-aos="flip-left"
+                            data-aos-delay="600">
+                            <i class="devicon-sass-plain colored"></i>
+                            <span>SASS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="LESS - Avançado" data-aos="flip-left"
+                            data-aos-delay="600">
+
+                            <i class="devicon-less-plain-wordmark"></i>
+
+                            <span>LESS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-intermediate" title="Next.js - Intermediário"
+                            data-aos="flip-left" data-aos-delay="650">
+                            <i class="devicon-nextjs-plain colored"></i>
+                            <span>Next.js</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-intermediate" title="Bootstrap - Intermediário"
+                            data-aos="flip-left" data-aos-delay="700">
+                            <i class="devicon-bootstrap-plain colored"></i>
+                            <span>Bootstrap</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tech-icon-box proficiency-advanced" title="JavaScript - Avançado" data-aos="flip-left"
-                        data-aos-delay="300">
-                        <i class="devicon-javascript-plain colored"></i>
-                        <span>JavaScript</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 95%"></div>
+                </div>
+
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">Tools & DevOps</h3>
+                    <div class="tech-icons-container">
+                        <div class="tech-icon-box proficiency-advanced" title="Git - Avançado" data-aos="flip-left"
+                            data-aos-delay="700">
+                            <i class="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="Vite - Avançado" data-aos="flip-left"
+                            data-aos-delay="800">
+                            <i class="devicon-vitejs-plain colored"></i>
+                            <span>Vite</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-intermediate" title="GitHub - Intermediário"
+                            data-aos="flip-left" data-aos-delay="850">
+                            <i class="devicon-github-original colored"></i>
+                            <span>GitHub</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-intermediate" title="Vercel - Intermediário"
+                            data-aos="flip-left" data-aos-delay="900">
+                            <i class="devicon-vercel-original colored"></i>
+                            <span>Vercel</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tech-icon-box proficiency-advanced" title="Tailwind CSS - Avançado" data-aos="flip-left"
-                        data-aos-delay="400">
-                        <i class="devicon-tailwindcss-original colored"></i>
-                        <span>Tailwind</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 92%"></div>
+                </div>
+                <!--Seção de Ferramentas de Produção-->
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">Ambiente de Desenvolvimento</h3>
+                    <div class="tech-icons-container">
+                        <div class="tech-icon-box proficiency-advanced" title="Grunt - Avançado" data-aos="flip-left"
+                            data-aos-delay="700">
+                            <i class="devicon-grunt-plain colored"></i>
+                            <span>Grunt</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-advanced" title="Gulp - Avançado" data-aos="flip-left"
+                            data-aos-delay="800">
+                            <i class="devicon-gulp-plain colored"></i>
+                            <span>Gulp</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-intermediate" title="Npm - Intermediário"
+                            data-aos="flip-left" data-aos-delay="850">
+
+                            <i class="devicon-npm-original-wordmark colored"></i>
+
+                            <span>NPM</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-box proficiency-intermediate" title="Vscode - Avançado"
+                            data-aos="flip-left" data-aos-delay="900">
+                            <i class="devicon-vscode-plain colored"></i>
+                            <span>Vercel</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 100%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="category-title">Web Essentials</h3>
-                <div class="tech-icons-container">
-                    <div class="tech-icon-box proficiency-advanced" title="HTML5 - Avançado" data-aos="flip-left"
-                        data-aos-delay="500">
-                        <i class="devicon-html5-plain colored"></i>
-                        <span>HTML5</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-advanced" title="CSS3 - Avançado" data-aos="flip-left"
-                        data-aos-delay="600">
-                        <i class="devicon-css3-plain colored"></i>
-                        <span>CSS3</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 93%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-advanced" title="SASS - Avançado" data-aos="flip-left"
-                        data-aos-delay="600">
-                        <i class="devicon-sass-plain colored"></i>
-                        <span>SASS</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 93%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-advanced" title="LESS - Avançado" data-aos="flip-left"
-                        data-aos-delay="600">
-
-                        <i class="devicon-less-plain-wordmark"></i>
-
-                        <span>LESS</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 93%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-intermediate" title="Next.js - Intermediário"
-                        data-aos="flip-left" data-aos-delay="650">
-                        <i class="devicon-nextjs-plain colored"></i>
-                        <span>Next.js</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-intermediate" title="Bootstrap - Intermediário"
-                        data-aos="flip-left" data-aos-delay="700">
-                        <i class="devicon-bootstrap-plain colored"></i>
-                        <span>Bootstrap</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 80%"></div>
-                        </div>
-                    </div>
+    <div class="comic-chapter chapter-expertise">
+        <section class="section comic-panel" id="expertise">
+            <p class="subtitle speech-bubble" data-aos="fade-up">Minhas Skills</p>
+            <h2 class="section-title speech-bubble" data-aos="fade-up">Minha Expertise</h2>
+            <div class="grid-expertise">
+                <div class="card-skill card-react" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-react"></i>
+                    <h3>React & TS</h3>
+                    <p class="speech-bubble">
+                        Construção de aplicações SPA escaláveis com React, aplicando Hooks
+                        avançados, Context API para gerenciamento de estado e TypeScript
+                        para segurança, padronização e manutenção de código em ambientes de
+                        médio e grande porte.
+                    </p>
+                </div>
+                <div class="card-skill card-mobile" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile-First</h3>
+                    <p class="speech-bubble">
+                        Criação de interfaces responsivas com Tailwind CSS e Bootstrap,
+                        aplicando boas práticas de UI/UX e abordagem mobile-first para
+                        garantir performance e acessibilidade em diferentes dispositivos.
+                    </p>
+                </div>
+                <div class="card-skill card-arch" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Arquitetura</h3>
+                    <p class="speech-bubble">
+                        Arquitetura frontend com componentização modular, separação de
+                        responsabilidades, organização escalável de pastas e integração com
+                        APIs REST seguindo boas práticas.
+                    </p>
+                </div>
+                <div class="card-skill card-ux" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-universal-access"></i>
+                    <h3>UX/UI & Acessibilidade</h3>
+                    <p class="speech-bubble">
+                        Foco em semântica, contraste e usabilidade seguindo as normas WCAG.
+                    </p>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="category-title">Tools & DevOps</h3>
-                <div class="tech-icons-container">
-                    <div class="tech-icon-box proficiency-advanced" title="Git - Avançado" data-aos="flip-left"
-                        data-aos-delay="700">
-                        <i class="devicon-git-plain colored"></i>
-                        <span>Git</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-advanced" title="Vite - Avançado" data-aos="flip-left"
-                        data-aos-delay="800">
-                        <i class="devicon-vitejs-plain colored"></i>
-                        <span>Vite</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-intermediate" title="GitHub - Intermediário"
-                        data-aos="flip-left" data-aos-delay="850">
-                        <i class="devicon-github-original colored"></i>
-                        <span>GitHub</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-intermediate" title="Vercel - Intermediário"
-                        data-aos="flip-left" data-aos-delay="900">
-                        <i class="devicon-vercel-original colored"></i>
-                        <span>Vercel</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
+    <div class="comic-chapter chapter-about">
+        <section class="about comic-panel" id="about">
+            <div class="about-image" data-aos="fade-right">
+                <img src="./src/assets/images/perfil/perfil.png" alt="Sobre Mim" />
             </div>
-            <!--Seção de Ferramentas de Produção-->
-            <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="category-title">Ambiente de Desenvolvimento</h3>
-                <div class="tech-icons-container">
-                    <div class="tech-icon-box proficiency-advanced" title="Grunt - Avançado" data-aos="flip-left"
-                        data-aos-delay="700">
-                        <i class="devicon-grunt-plain colored"></i>
-                        <span>Grunt</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-advanced" title="Gulp - Avançado" data-aos="flip-left"
-                        data-aos-delay="800">
-                        <i class="devicon-gulp-plain colored"></i>
-                        <span>Gulp</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-intermediate" title="Npm - Intermediário" data-aos="flip-left"
-                        data-aos-delay="850">
-
-                        <i class="devicon-npm-original-wordmark colored"></i>
-
-                        <span>NPM</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="tech-icon-box proficiency-intermediate" title="Vscode - Avançado"
-                        data-aos="flip-left" data-aos-delay="900">
-                        <i class="devicon-vscode-plain colored"></i>
-                        <span>Vercel</span>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 100%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="expertise">
-        <p class="subtitle" data-aos="fade-up">Minhas Skills</p>
-        <h2 class="section-title" data-aos="fade-up">Minha Expertise</h2>
-        <div class="grid-expertise">
-            <div class="card-skill card-react" data-aos="fade-up" data-aos-delay="100">
-                <i class="fab fa-react"></i>
-                <h3>React & TS</h3>
-                <p>
-                    Construção de aplicações SPA escaláveis com React, aplicando Hooks
-                    avançados, Context API para gerenciamento de estado e TypeScript
-                    para segurança, padronização e manutenção de código em ambientes de
-                    médio e grande porte.
+            <div class="about-text" data-aos="fade-left">
+                <p class="subtitle speech-bubble">Sobre</p>
+                <h2>Quem é Paulo Henrique?</h2>
+                <p class="speech-bubble">
+                    Sou graduando em Engenharia de Software e pós-graduando em
+                    Desenvolvimento Front-End, com foco na construção de interfaces
+                    modernas, acessíveis e altamente performáticas. Atuo no
+                    desenvolvimento de aplicações utilizando React, TypeScript, JavaScript
+                    e Tailwind CSS, aplicando boas práticas de componentização,
+                    arquitetura escalável e código limpo. Tenho experiência com consumo de
+                    APIs REST, controle de estado com Context API, versionamento com Git e
+                    integração de projetos utilizando Vite. Durante meus estudos implementei otimizações de performance,
+                    reduzindo em
+                    até 30% o tempo de carregamento das aplicações utilizado React Typescript, Javascript. Trabalho com
+                    abordagem
+                    Mobile First, design responsivo e atenção aos detalhes de UX/UI,
+                    seguindo padrões de acessibilidade e usabilidade. Estou sempre em
+                    busca de evolução técnica, performance e qualidade de software,
+                    entregando soluções eficientes e alinhadas às necessidades do negócio.
                 </p>
-            </div>
-            <div class="card-skill card-mobile" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile-First</h3>
-                <p>
-                    Criação de interfaces responsivas com Tailwind CSS e Bootstrap,
-                    aplicando boas práticas de UI/UX e abordagem mobile-first para
-                    garantir performance e acessibilidade em diferentes dispositivos.
-                </p>
-            </div>
-            <div class="card-skill card-arch" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-layer-group"></i>
-                <h3>Arquitetura</h3>
-                <p>
-                    Arquitetura frontend com componentização modular, separação de
-                    responsabilidades, organização escalável de pastas e integração com
-                    APIs REST seguindo boas práticas.
-                </p>
-            </div>
-            <div class="card-skill card-ux" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-universal-access"></i>
-                <h3>UX/UI & Acessibilidade</h3>
-                <p>
-                    Foco em semântica, contraste e usabilidade seguindo as normas WCAG.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <section class="about" id="about">
-        <div class="about-image" data-aos="fade-right">
-            <img src="./src/assets/images/perfil/perfil.png" alt="Sobre Mim" />
-        </div>
-        <div class="about-text" data-aos="fade-left">
-            <p class="subtitle">Sobre</p>
-            <h2>Quem é Paulo Henrique?</h2>
-            <p>
-                Sou graduando em Engenharia de Software e pós-graduando em
-                Desenvolvimento Front-End, com foco na construção de interfaces
-                modernas, acessíveis e altamente performáticas. Atuo no
-                desenvolvimento de aplicações utilizando React, TypeScript, JavaScript
-                e Tailwind CSS, aplicando boas práticas de componentização,
-                arquitetura escalável e código limpo. Tenho experiência com consumo de
-                APIs REST, controle de estado com Context API, versionamento com Git e
-                integração de projetos utilizando Vite. Durante meus estudos implementei otimizações de performance,
-                reduzindo em
-                até 30% o tempo de carregamento das aplicações utilizado React Typescript, Javascript. Trabalho com
-                abordagem
-                Mobile First, design responsivo e atenção aos detalhes de UX/UI,
-                seguindo padrões de acessibilidade e usabilidade. Estou sempre em
-                busca de evolução técnica, performance e qualidade de software,
-                entregando soluções eficientes e alinhadas às necessidades do negócio.
-            </p>
-
-            <div class="education-tags">
-                <span data-aos="zoom-in" data-aos-delay="100">Eng. de Software</span>
-                <span data-aos="zoom-in" data-aos-delay="200">Pós Front-End</span>
-                <span data-aos="zoom-in" data-aos-delay="300">Top 50 FullStack</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="section featured-projects" id="featured" data-aos="fade-up">
-        <div class="featured-header" data-aos="fade-up">
-            <div>
-                <p class="subtitle">Destaque</p>
-                <h2 class="section-title">Projetos em Destaque</h2>
-                <p class="featured-subtitle">Os melhores projetos que demonstram minhas habilidades</p>
-            </div>
-        </div>
-        <div class="featured-grid">
-            <div class="featured-card featured-main" data-aos="fade-up">
-                <div class="featured-badge">⭐ MAIS POPULAR</div>
-                <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker" />
-                <div class="featured-content">
-                    <h3>Plataforma Hack Labs</h3>
-                    <p>Plataforma educacional com arquitetura escalável, UI profissional e foco em performance</p>
-                    <div class="tech-stack">React 18 • TypeScript • CSS • Performance</div>
-                    <div class="featured-stats">
-                        <span>🚀 Performance</span>
-                        <span>💻 Responsivo</span>
-                        <span>✨ Premium UI</span>
-                    </div>
-                    <a href="https://plataforma-hacker.vercel.app/" target="_blank" class="featured-link">Explorar
-                        Projeto <i class="fas fa-arrow-right"></i></a>
+                <div class="education-tags">
+                    <span data-aos="zoom-in" data-aos-delay="100">Eng. de Software</span>
+                    <span data-aos="zoom-in" data-aos-delay="200">Pós Front-End</span>
+                    <span data-aos="zoom-in" data-aos-delay="300">Top 50 FullStack</span>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div class="featured-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="featured-badge secondary">💡 INOVADOR</div>
-                <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear" />
-                <div class="featured-content">
-                    <h3>SyntaxWear</h3>
-                    <p>E-commerce moderno com validação robusta e experiência otimizada</p>
-                    <div class="tech-stack">TypeScript • Tailwind • Zod</div>
-                    <div class="featured-stats">
-                        <span>📦 E-commerce</span>
-                        <span>✅ Validação</span>
-                    </div>
-                    <a href="https://syntax-wear-app.vercel.app/" target="_blank" class="featured-link">Explorar Projeto
-                        <i class="fas fa-arrow-right"></i></a>
+    <div class="comic-chapter chapter-projects">
+        <section class="section featured-projects comic-panel" id="featured" data-aos="fade-up">
+            <div class="featured-header" data-aos="fade-up">
+                <div>
+                    <p class="subtitle speech-bubble">Destaque</p>
+                    <h2 class="section-title speech-bubble">Projetos em Destaque</h2>
+                    <p class="featured-subtitle speech-bubble">Os melhores projetos que demonstram minhas habilidades
+                    </p>
                 </div>
             </div>
-
-            <div class="featured-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="featured-badge secondary">🎯 PRODUTIVIDADE</div>
-                <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kanban" />
-                <div class="featured-content">
-                    <h3>Kanban Task Manager</h3>
-                    <p>Sistema de gerenciamento com persistência local e tema Dark/Light</p>
-                    <div class="tech-stack">React • TypeScript • Tailwind</div>
-                    <div class="featured-stats">
-                        <span>📋 CRUD</span>
-                        <span>🌓 Dark Mode</span>
-                    </div>
-                    <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank"
-                        class="featured-link">Explorar Projeto <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="portfolio">
-        <div class="portfolio-header" data-aos="fade-up">
-            <div>
-                <p class="subtitle">Projetos Recentes</p>
-                <h2 class="section-title">Meu Portfolio</h2>
-            </div>
-            <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-secondary">Ver Todo o GitHub</a>
-        </div>
-        <div class="grid-portfolio">
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
+            <div class="featured-grid">
+                <div class="featured-card featured-main" data-aos="fade-up">
+                    <div class="featured-badge">⭐ MAIS POPULAR</div>
                     <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker" />
-                    <h3>Praforma Hack Labs</h3>
-                    <p>
-                        Plataforma educacional voltada para segurança da informação e
-                        penetration testing. Desenvolvida com React 18 e TypeScript,
-                        possui arquitetura escalável, UI temática profissional e foco em
-                        performance e organização de código.
-                    </p>
-                    <div class="tech-stack">
-                        React • TypeScript • CSS • JavaScript • PowerShell • Batchfile
+                    <div class="featured-content">
+                        <h3>Plataforma Hack Labs</h3>
+                        <p class="speech-bubble">Plataforma educacional com arquitetura escalável, UI profissional e
+                            foco em performance</p>
+                        <div class="tech-stack">React 18 • TypeScript • CSS • Performance</div>
+                        <div class="featured-stats">
+                            <span>🚀 Performance</span>
+                            <span>💻 Responsivo</span>
+                            <span>✨ Premium UI</span>
+                        </div>
+                        <a href="https://plataforma-hacker.vercel.app/" target="_blank" class="featured-link">Explorar
+                            Projeto <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <a href="https://plataforma-hacker.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
                 </div>
-            </div>
 
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge secondary">💡 INOVADOR</div>
                     <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear" />
-                    <h3>SyntaxWear</h3>
-                    <p>
-                        E-commerce moderno com foco em conversão, performance e validação
-                        de dados. Implementação de formulários robustos com React Hook
-                        Form + Zod e navegação fluida priorizando a experiência do
-                        usuário.
-                    </p>
-                    <div class="tech-stack">TS • Tailwind • Zod</div>
-                    <a href="https://syntax-wear-app.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
+                    <div class="featured-content">
+                        <h3>SyntaxWear</h3>
+                        <p class="speech-bubble">E-commerce moderno com validação robusta e experiência otimizada</p>
+                        <div class="tech-stack">TypeScript • Tailwind • Zod</div>
+                        <div class="featured-stats">
+                            <span>📦 E-commerce</span>
+                            <span>✅ Validação</span>
+                        </div>
+                        <a href="https://syntax-wear-app.vercel.app/" target="_blank" class="featured-link">Explorar
+                            Projeto
+                            <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-badge secondary">🎯 PRODUTIVIDADE</div>
+                    <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kanban" />
+                    <div class="featured-content">
+                        <h3>Kanban Task Manager</h3>
+                        <p class="speech-bubble">Sistema de gerenciamento com persistência local e tema Dark/Light</p>
+                        <div class="tech-stack">React • TypeScript • Tailwind</div>
+                        <div class="featured-stats">
+                            <span>📋 CRUD</span>
+                            <span>🌓 Dark Mode</span>
+                        </div>
+                        <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank"
+                            class="featured-link">Explorar Projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kambab" />
-                    <h3>Kanban Task Manage</h3>
-                    <p>
-                        Sistema de gerenciamento de tarefas inspirado em Kanban, com
-                        persistência local, alternância de tema Dark/Light e foco em
-                        produtividade, usabilidade e organização visual e CRUD.
-                    </p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
+    <div class="comic-chapter chapter-portfolio">
+        <section class="section comic-panel" id="portfolio">
+            <div class="portfolio-header" data-aos="fade-up">
+                <div>
+                    <p class="subtitle speech-bubble">Projetos Recentes</p>
+                    <h2 class="section-title speech-bubble">Meu Portfolio</h2>
+                </div>
+                <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-secondary">Ver Todo o
+                    GitHub</a>
+            </div>
+            <div class="grid-portfolio">
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/hacker-app.png" alt="Prataforma de Hacker" />
+                        <h3>Praforma Hack Labs</h3>
+                        <p class="speech-bubble">
+                            Plataforma educacional voltada para segurança da informação e
+                            penetration testing. Desenvolvida com React 18 e TypeScript,
+                            possui arquitetura escalável, UI temática profissional e foco em
+                            performance e organização de código.
+                        </p>
+                        <div class="tech-stack">
+                            React • TypeScript • CSS • JavaScript • PowerShell • Batchfile
+                        </div>
+                        <a href="https://plataforma-hacker.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/cardresponsivo.png" alt="Página responsiva syntaxWear" />
+                        <h3>SyntaxWear</h3>
+                        <p class="speech-bubble">
+                            E-commerce moderno com foco em conversão, performance e validação
+                            de dados. Implementação de formulários robustos com React Hook
+                            Form + Zod e navegação fluida priorizando a experiência do
+                            usuário.
+                        </p>
+                        <div class="tech-stack">TS • Tailwind • Zod</div>
+                        <a href="https://syntax-wear-app.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/kabancard.png" alt="Praforma de tarefas kambab" />
+                        <h3>Kanban Task Manage</h3>
+                        <p class="speech-bubble">
+                            Sistema de gerenciamento de tarefas inspirado em Kanban, com
+                            persistência local, alternância de tema Dark/Light e foco em
+                            produtividade, usabilidade e organização visual e CRUD.
+                        </p>
+                        <div class="tech-stack">React • TS • Tailwind</div>
+                        <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+" />
+                        <h3>Disney+ UI Clone</h3>
+                        <p class="speech-bubble">
+                            Clone de interface inspirado no Disney+, desenvolvido para estudo
+                            avançado de UI, responsividade e fidelidade visual, seguindo
+                            padrões de plataformas de streaming.
+                        </p>
+                        <div class="tech-stack">React • TS • Tailwind</div>
+                        <a href="https://clone-lime-iota.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/hero.png" alt="Praforma de tarefas kambab" />
+                        <h3>Hero Carrousel</h3>
+                        <p class="speech-bubble">
+                            Componente reutilizável de carousel para landing pages, com
+                            transições suaves, controle automático e manual, focado em
+                            performance, UX e fácil reutilização.
+                        </p>
+                        <div class="tech-stack">React • TS • Tailwind</div>
+                        <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/marioFan.png" alt="Praforma de tarefas kambab" />
+                        <h3>Mario Bros — Fan Website</h3>
+                        <p class="speech-bubble">
+                            Website temático com animações e interações, focado em
+                            storytelling, navegação fluida e experiência imersiva para o
+                            usuário.
+                        </p>
+                        <div class="tech-stack">HTML5 • JavaScript • CSS3</div>
+                        <a href="https://gta-react-site-8thn.vercel.app/#jogos" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/gibhi.png" alt="Praforma de tarefas kambab" />
+                        <h3>Studio Ghibli Platform</h3>
+                        <p class="speech-bubble">
+                            Aplicação web consumindo API externa para exibição dinâmica de
+                            conteúdos, com foco em componentização, organização de dados e
+                            identidade visual inspirada no universo cinematográfico.
+                        </p>
+                        <div class="tech-stack">React • TS • Tailwind</div>
+                        <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep" />
+                        <h3>Buscador Cep</h3>
+                        <p class="speech-bubble">
+                            Interface de alta performance para localização de logradouros,
+                            desenvolvida com React e Axios, focada em uma experiência de
+                            usuário fluida e tratamento rigoroso de dados assíncronos.
+                        </p>
+                        <div class="tech-stack">React • TS • Tailwind</div>
+                        <a href="https://buscar-cep-nu.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/pokedexmapdev.png" alt="Buscador de Cep" />
+                        <h3>Pokédex Explorer</h3>
+                        <p class="speech-bubble">
+                            Este projeto é um dashboard funcional que demonstra o domínio de manipulação de eventos e
+                            persistência de dados no navegador. Em vez de depender de requisições externas, o sistema
+                            foca
+                            em uma performance instantânea ao alternar entre perfis de Pokémon pré-carregados e
+                            gerenciar
+                            listas de tarefas.
+                        </p>
+                        <div class="tech-stack">HTML5 • CSS3 • JavaScript </div>
+                        <a href="https://pokedex-uniti.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/psicologia.png" alt="Buscador de Cep" />
+                        <h3>Landing Page Psicologia</h3>
+                        <p class="speech-bubble">
+                            Página de destino desenvolvida para psicólogos que buscam uma vitrine elegante e funcional
+                            para
+                            captar pacientes e apresentar sua abordagem clínica.
+
+                            Design Acolhedor: Interface pensada na experiência do paciente, utilizando cores e
+                            tipografia
+                            que transmitem calma e segurança.
+
+                            Seções Estratégicas: Áreas dedicadas para apresentação profissional, especialidades, método
+                            de
+                            trabalho e FAQ.
+                        </p>
+                        <div class="tech-stack">HTML5 • CSS3 • JavaScript </div>
+                        <a href="https://site-psicologia-livid.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/advocacia.png" alt="Buscador de Cep" />
+                        <h3>Landing Page Advocacia</h3>
+                        <p class="speech-bubble">
+                            Solução digital desenvolvida para escritórios que buscam transmitir credibilidade e
+                            converter
+                            visitantes em clientes. O design foi projetado para projetar seriedade e confiança imediata.
+
+                            Arquitetura de Autoridade: Seções estruturadas para destacar áreas de atuação, histórico de
+                            sucesso e equipe jurídica.
+
+                            Foco em Leads: Botões de Call-to-Action (CTA) estrategicamente posicionados para agendamento
+                            de
+                            consultorias jurídicas.
+
+                            Performance e SEO: Estrutura otimizada para carregamento rápido e melhor ranqueamento em
+                            mecanismos de busca.
+                        </p>
+                        <div class="tech-stack">React • TS • Tailwind</div>
+                        <a href="https://advocacia-kappa.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/cafeteria.png" alt="Buscador de Cep" />
+                        <h3>Site Café Aromas</h3>
+                        <p class="speech-bubble">
+                            O Cafe Aroma foi desenvolvido utilizando as tecnologias mais recentes do ecossistema Web.
+                            Optei
+                            pelo Next.js 15 e React 19 para garantir performance excepcional e SEO otimizado. Para
+                            elevar a
+                            experiência visual, integrei a biblioteca AOS, permitindo animações suaves durante a
+                            navegação.
+                            O projeto foi construído inteiramente com TypeScript, garantindo um código escalável, seguro
+                            e
+                            de fácil manutenção.
+                        </p>
+                        <div class="tech-stack">React • Next • Typescript</div>
+                        <a href="https://cafe-aroma-preto-2t3me1rxy-paulohenrique537s-projects.vercel.app/"
+                            target="_blank">Acessar Deploy <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/pousada.png" alt="Buscador de Cep" />
+                        <h3>Pousada</h3>
+                        <p class="speech-bubble">
+                            Projeto desenvolvido com o objetivo de criar uma presença digital elegante e rápida para o
+                            setor
+                            hoteleiro. Optei por utilizar HTML5, CSS3 e JavaScript Vanilla (puro) para garantir o
+                            carregamento mais leve possível e total controle sobre o código.
+                        </p>
+                        <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
+                        <a href="https://pousada-pi.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/botflix.png" alt="Buscador de Cep" />
+                        <h3>Botflix</h3>
+                        <p class="speech-bubble">
+                            Implementei uma lógica em JavaScript que sugere títulos baseados no estado emocional do
+                            usuário.
+                            Em vez de apenas categorias genéricas como 'Ação' ou 'Drama', o sistema utiliza tags
+                            inteligentes para entregar o conteúdo certo para o momento certo, melhorando a experiência
+                            de
+                            descoberta (UX).
+                        </p>
+                        <div class="tech-stack">HTML5 • CSS3 • JavaScript • APIs</div>
+                        <a href="https://botflix-pro-redesign-main.vercel.app/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-info">
+                        <img src="./src/assets/images/projects/bot.png" alt="Cyberbot" />
+                        <h3>Cyberbot</h3>
+                        <p class="speech-bubble">
+                            Desenvolvimento da camada de interatividade do portfólio utilizando JavaScript moderno
+                            (ES6+). O
+                            script gerencia desde animações de entrada e navegação suave até a renderização de gráficos
+                            complexos e simulações de código em tempo real, garantindo uma interface responsiva e de
+                            alta
+                            performance.
+                        </p>
+                        <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
+                        <a href="https://paulohenrique993940.github.io/Boot/" target="_blank">Acessar Deploy <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/diney+.png" alt="Clone do Disney+" />
-                    <h3>Disney+ UI Clone</h3>
-                    <p>
-                        Clone de interface inspirado no Disney+, desenvolvido para estudo
-                        avançado de UI, responsividade e fidelidade visual, seguindo
-                        padrões de plataformas de streaming.
-                    </p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://clone-lime-iota.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
+    <div class="comic-chapter chapter-contact">
+        <section class="contact comic-panel" id="contact" data-aos="fade-up">
+            <p class="subtitle speech-bubble">Vamos conversar?</p>
+            <h2>Contato</h2>
+            <p class="speech-bubble">Salvador – BA | (71) 99306-1316</p>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Nome" required />
+                    <input type="email" placeholder="E-mail" required />
                 </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/hero.png" alt="Praforma de tarefas kambab" />
-                    <h3>Hero Carrousel</h3>
-                    <p>
-                        Componente reutilizável de carousel para landing pages, com
-                        transições suaves, controle automático e manual, focado em
-                        performance, UX e fácil reutilização.
-                    </p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://todo-list-app-indol-nine.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/marioFan.png" alt="Praforma de tarefas kambab" />
-                    <h3>Mario Bros — Fan Website</h3>
-                    <p>
-                        Website temático com animações e interações, focado em
-                        storytelling, navegação fluida e experiência imersiva para o
-                        usuário.
-                    </p>
-                    <div class="tech-stack">HTML5 • JavaScript • CSS3</div>
-                    <a href="https://gta-react-site-8thn.vercel.app/#jogos" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/gibhi.png" alt="Praforma de tarefas kambab" />
-                    <h3>Studio Ghibli Platform</h3>
-                    <p>
-                        Aplicação web consumindo API externa para exibição dinâmica de
-                        conteúdos, com foco em componentização, organização de dados e
-                        identidade visual inspirada no universo cinematográfico.
-                    </p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://ghibli-app-mu.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/buscacep.png" alt="Buscador de Cep" />
-                    <h3>Buscador Cep</h3>
-                    <p>
-                        Interface de alta performance para localização de logradouros,
-                        desenvolvida com React e Axios, focada em uma experiência de
-                        usuário fluida e tratamento rigoroso de dados assíncronos.
-                    </p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://buscar-cep-nu.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/pokedexmapdev.png" alt="Buscador de Cep" />
-                    <h3>Pokédex Explorer</h3>
-                    <p>
-                        Este projeto é um dashboard funcional que demonstra o domínio de manipulação de eventos e
-                        persistência de dados no navegador. Em vez de depender de requisições externas, o sistema foca
-                        em uma performance instantânea ao alternar entre perfis de Pokémon pré-carregados e gerenciar
-                        listas de tarefas.
-                    </p>
-                    <div class="tech-stack">HTML5 • CSS3 • JavaScript </div>
-                    <a href="https://pokedex-uniti.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/psicologia.png" alt="Buscador de Cep" />
-                    <h3>Landing Page Psicologia</h3>
-                    <p>
-                        Página de destino desenvolvida para psicólogos que buscam uma vitrine elegante e funcional para
-                        captar pacientes e apresentar sua abordagem clínica.
-
-                        Design Acolhedor: Interface pensada na experiência do paciente, utilizando cores e tipografia
-                        que transmitem calma e segurança.
-
-                        Seções Estratégicas: Áreas dedicadas para apresentação profissional, especialidades, método de
-                        trabalho e FAQ.
-                    </p>
-                    <div class="tech-stack">HTML5 • CSS3 • JavaScript </div>
-                    <a href="https://site-psicologia-livid.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/advocacia.png" alt="Buscador de Cep" />
-                    <h3>Landing Page Advocacia</h3>
-                    <p>
-                        Solução digital desenvolvida para escritórios que buscam transmitir credibilidade e converter
-                        visitantes em clientes. O design foi projetado para projetar seriedade e confiança imediata.
-
-                        Arquitetura de Autoridade: Seções estruturadas para destacar áreas de atuação, histórico de
-                        sucesso e equipe jurídica.
-
-                        Foco em Leads: Botões de Call-to-Action (CTA) estrategicamente posicionados para agendamento de
-                        consultorias jurídicas.
-
-                        Performance e SEO: Estrutura otimizada para carregamento rápido e melhor ranqueamento em
-                        mecanismos de busca.
-                    </p>
-                    <div class="tech-stack">React • TS • Tailwind</div>
-                    <a href="https://advocacia-kappa.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/cafeteria.png" alt="Buscador de Cep" />
-                    <h3>Site Café Aromas</h3>
-                    <p>
-                        O Cafe Aroma foi desenvolvido utilizando as tecnologias mais recentes do ecossistema Web. Optei
-                        pelo Next.js 15 e React 19 para garantir performance excepcional e SEO otimizado. Para elevar a
-                        experiência visual, integrei a biblioteca AOS, permitindo animações suaves durante a navegação.
-                        O projeto foi construído inteiramente com TypeScript, garantindo um código escalável, seguro e
-                        de fácil manutenção.
-                    </p>
-                    <div class="tech-stack">React • Next • Typescript</div>
-                    <a href="https://cafe-aroma-preto-2t3me1rxy-paulohenrique537s-projects.vercel.app/"
-                        target="_blank">Acessar Deploy <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/pousada.png" alt="Buscador de Cep" />
-                    <h3>Pousada</h3>
-                    <p>
-                        Projeto desenvolvido com o objetivo de criar uma presença digital elegante e rápida para o setor
-                        hoteleiro. Optei por utilizar HTML5, CSS3 e JavaScript Vanilla (puro) para garantir o
-                        carregamento mais leve possível e total controle sobre o código.
-                    </p>
-                    <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
-                    <a href="https://pousada-pi.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/botflix.png" alt="Buscador de Cep" />
-                    <h3>Botflix</h3>
-                    <p>
-                        Implementei uma lógica em JavaScript que sugere títulos baseados no estado emocional do usuário.
-                        Em vez de apenas categorias genéricas como 'Ação' ou 'Drama', o sistema utiliza tags
-                        inteligentes para entregar o conteúdo certo para o momento certo, melhorando a experiência de
-                        descoberta (UX).
-                    </p>
-                    <div class="tech-stack">HTML5 • CSS3 • JavaScript • APIs</div>
-                    <a href="https://botflix-pro-redesign-main.vercel.app/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-info">
-                    <img src="./src/assets/images/projects/bot.png" alt="Cyberbot" />
-                    <h3>Cyberbot</h3>
-                    <p>
-                        Desenvolvimento da camada de interatividade do portfólio utilizando JavaScript moderno (ES6+). O
-                        script gerencia desde animações de entrada e navegação suave até a renderização de gráficos
-                        complexos e simulações de código em tempo real, garantindo uma interface responsiva e de alta
-                        performance.
-                    </p>
-                    <div class="tech-stack">HTML5 • CSS3 • JavaScript</div>
-                    <a href="https://paulohenrique993940.github.io/Boot/" target="_blank">Acessar Deploy <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact" data-aos="fade-up">
-        <p class="subtitle">Vamos conversar?</p>
-        <h2>Contato</h2>
-        <p>Salvador – BA | (71) 99306-1316</p>
-
-        <form id="contact-form">
-            <div class="form-group">
-                <input type="text" placeholder="Nome" required />
-                <input type="email" placeholder="E-mail" required />
-            </div>
-            <textarea placeholder="Como posso ajudar no seu projeto?" rows="5"></textarea>
-            <button type="submit" class="btn-submit">Enviar Mensagem</button>
-        </form>
-    </section>
+                <textarea placeholder="Como posso ajudar no seu projeto?" rows="5"></textarea>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
 
     <footer>
         <div class="footer-top">

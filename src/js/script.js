@@ -48,6 +48,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* =====================
+       THEME TOGGLE
+    ===================== */
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement; // This is the <html> tag
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        htmlElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+        }
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlElement.setAttribute('data-theme', 'dark');
+        themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        let theme = htmlElement.getAttribute('data-theme');
+        if (theme === 'light') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            themeToggleBtn.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+        }
+    });
+
+    /* =====================
        NAVBAR SCROLL
     ===================== */
     const navbar = document.querySelector('.navbar');
@@ -57,8 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navbar.style.padding = window.scrollY > 50 ? '10px 8%' : '20px 8%';
 
-        navbar.style.background =
-            window.scrollY > 50 ? 'rgba(10,14,30,0.9)' : 'rgba(10,14,30,0.6)';
+        // Adjust navbar background based on current theme for scroll effect
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            navbar.style.background = window.scrollY > 50 ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0.6)';
+        } else {
+            navbar.style.background = window.scrollY > 50 ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.6)';
+        }
     });
 
     /* =====================

@@ -5,41 +5,54 @@
 
 
 :root {
-  /* Brand - Paleta Comic Book */
-  --primary-color: #6366f1;           /* Índigo principal */
-  --primary-light: #818cf8;           /* Índigo claro */
-  --primary-dark: #4f46e5;            /* Índigo escuro */
-  
-  --secondary-color: #0f172a;         /* Azul muito escuro */
-  --secondary-light: #1e293b;         /* Azul escuro */
-  
-  --accent-color: #22c55e;            /* Verde (mantém) */
-  --accent-light: #86efac;            /* Verde claro */
-  --accent-dark: #16a34a;             /* Verde escuro */
-  
-  --orange-main: #f59e0b;             /* Laranja/Ouro principal */
-  --orange-light: #fbbf24;            /* Laranja/Ouro claro */
-  --orange-dark: #d97706;             /* Laranja/Ouro escuro */
-  
-  --cyan-main: #06b6d4;               /* Cyan novo */
-  --cyan-light: #22d3ee;              /* Cyan claro */
-  --cyan-dark: #0891b2;               /* Cyan escuro */
-  
-  --bg-light: #f8fafc;
+  /* BRAND – Modern Comic / Premium Dev */
+
+  /* Primary (Índigo elegante) */
+  --primary-color: #4f46e5;
+  /* foco / CTA */
+  --primary-light: #a5b4fc;
+  /* hover / glow */
+  --primary-dark: #312e81;
+  /* headers */
+
+  /* Secondary (Dark navy clean) */
+  --secondary-color: #020617;
+  /* fundo principal */
+  --secondary-light: #0f172a;
+  /* cards */
+  --secondary-dark: #000000;
+
+  /* Accent (Verde tech elegante) */
+  --accent-color: #22c55e;
+  --accent-light: #bbf7d0;
+  --accent-dark: #15803d;
+
+  /* Highlight (Laranja premium) */
+  --orange-main: #f59e0b;
+  --orange-light: #fde68a;
+  --orange-dark: #b45309;
+
+  /* Tech Detail (Cyan clean) */
+  --cyan-main: #0ea5e9;
+  --cyan-light: #bae6fd;
+  --cyan-dark: #0369a1;
+
+  /* Backgrounds */
+  --bg-light: #f9fafb;
   --bg-dark: #020617;
+
   /* Text */
-  --text-dark: #0f172a;
-  /* Títulos */
+  --text-dark: #020617;
+  /* títulos light mode */
   --text-light: #475569;
-  /* Parágrafos */
+  /* parágrafos */
   --text-muted: #94a3b8;
-  /* Labels / hints */
+  /* labels */
 
   /* UI */
-  --border-color: #e2e8f0;
+  --border-color: #e5e7eb;
   --white: #ffffff;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -171,7 +184,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -200,7 +213,7 @@ body {
   --float2-y: -20%;
 }
 
-.hero > .hero-content::before {
+.hero>.hero-content::before {
   content: '';
   position: absolute;
   top: var(--float2-y);
@@ -216,7 +229,7 @@ body {
 }
 
 /* Elemento flutuante 3 - Magenta */
-.hero > .hero-image::before {
+.hero>.hero-image::before {
   content: '';
   position: absolute;
   bottom: -15%;
@@ -237,28 +250,61 @@ body {
 }
 
 .hero::after {
-  box-shadow: 
+  box-shadow:
     inset -200px -100px 200px rgba(34, 197, 94, 0.02),
     inset 100px 100px 300px rgba(6, 182, 212, 0.01);
 }
 
 @keyframes float1 {
-  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
-  25% { transform: translateY(-30px) translateX(20px) scale(1.05); }
-  50% { transform: translateY(-50px) translateX(0px) scale(1); }
-  75% { transform: translateY(-30px) translateX(-20px) scale(0.95); }
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+  25% {
+    transform: translateY(-30px) translateX(20px) scale(1.05);
+  }
+
+  50% {
+    transform: translateY(-50px) translateX(0px) scale(1);
+  }
+
+  75% {
+    transform: translateY(-30px) translateX(-20px) scale(0.95);
+  }
 }
 
 @keyframes float2 {
-  0%, 100% { transform: translateY(0px) translateX(0px) scale(0.95); }
-  33% { transform: translateY(40px) translateX(30px) scale(1); }
-  66% { transform: translateY(20px) translateX(-40px) scale(1.05); }
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(0.95);
+  }
+
+  33% {
+    transform: translateY(40px) translateX(30px) scale(1);
+  }
+
+  66% {
+    transform: translateY(20px) translateX(-40px) scale(1.05);
+  }
 }
 
 @keyframes float3 {
-  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
-  40% { transform: translateY(-30px) translateX(-25px) scale(1.05); }
-  80% { transform: translateY(30px) translateX(25px) scale(0.95); }
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+  40% {
+    transform: translateY(-30px) translateX(-25px) scale(1.05);
+  }
+
+  80% {
+    transform: translateY(30px) translateX(25px) scale(0.95);
+  }
 }
 
 .hero-content {
@@ -341,8 +387,15 @@ body {
 }
 
 @keyframes pulse-border {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
 }
 
 .hero-content h4 {
@@ -455,7 +508,7 @@ body {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   /* Forma orgânica modernista */
   border: 3px solid rgba(6, 182, 212, 0.3);
-  box-shadow: 
+  box-shadow:
     0 0 60px rgba(6, 182, 212, 0.4),
     0 0 120px rgba(168, 85, 247, 0.2),
     0 30px 60px rgba(0, 0, 0, 0.6),
@@ -476,16 +529,18 @@ body {
 }
 
 @keyframes glow {
-  0%, 100% {
-    box-shadow: 
+
+  0%,
+  100% {
+    box-shadow:
       0 0 60px rgba(6, 182, 212, 0.4),
       0 0 120px rgba(168, 85, 247, 0.2),
       0 30px 60px rgba(0, 0, 0, 0.6),
       inset 0 0 60px rgba(6, 182, 212, 0.1);
   }
-  
+
   50% {
-    box-shadow: 
+    box-shadow:
       0 0 80px rgba(6, 182, 212, 0.6),
       0 0 160px rgba(168, 85, 247, 0.4),
       0 30px 60px rgba(0, 0, 0, 0.6),
@@ -853,7 +908,7 @@ body {
   z-index: 0;
 }
 
-.contact > * {
+.contact>* {
   position: relative;
   z-index: 1;
 }
@@ -954,7 +1009,7 @@ footer {
     padding: 60px 5%;
   }
 
-  .hero-btns{
+  .hero-btns {
     display: flex;
     flex-direction: column;
     gap: 10px;
