@@ -19,20 +19,6 @@
 
     <!-- Custom Theme -->
     <link rel="stylesheet" href="./src/css/batman-theme.css">
-
-    <style>
-        .tech-category-title {
-            font-family: var(--font-display);
-            color: var(--accent-color);
-            margin: 40px 0 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid var(--glass-border);
-            padding-bottom: 10px;
-            display: block;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -52,119 +38,10 @@
         </div>
     </div>
 
-    <style>
-        #intro-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transition: transform 1s cubic-bezier(0.87, 0, 0.13, 1);
-        }
-
-        .signal-light {
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            background: radial-gradient(circle at center, rgba(245, 197, 24, 0.15) 0%, transparent 70%);
-            animation: pulse-light 4s infinite ease-in-out;
-        }
-
-        @keyframes pulse-light {
-
-            0%,
-            100% {
-                opacity: 0.5;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-        }
-
-        .intro-content {
-            text-align: center;
-            z-index: 10001;
-            padding: 20px;
-            position: relative;
-        }
-
-        #close-intro {
-            position: relative;
-            z-index: 10002;
-            cursor: pointer;
-        }
-
-        .intro-text {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: #fff;
-            margin: 20px 0;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        .intro-subtext-destaque {
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: #f5c542;
-            /* dourado sofisticado */
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 10px;
-
-            text-shadow:
-                0 0 6px rgba(245, 197, 66, 0.25),
-                0 0 18px rgba(245, 197, 66, 0.15);
-
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeHero 1.2s ease forwards;
-        }
-
-        .intro-subtext-destaque::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 2px;
-            margin-top: 8px;
-            background: linear-gradient(90deg, #f5c542, transparent);
-            box-shadow: 0 0 10px rgba(245, 197, 66, 0.7);
-        }
-
-        /* Animação de entrada cinematográfica */
-        @keyframes fadeHero {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .intro-subtext {
-            color: var(--tech-blue);
-            font-family: var(--font-main);
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            opacity: 0.8;
-        }
-
-        /* Classe para fechar a tela */
-        .loader-hidden {
-            transform: translateY(-100%);
-        }
-    </style>
-
+    <!-- Cursor customizado fixo no topo do body para garantir visibilidade -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
+    
     <div class="bg-grid"></div>
     <canvas id="particles-canvas" class="fog-container"></canvas>
 
@@ -185,8 +62,7 @@
             <div class="hero-content">
                 <span class="hero-tag glitch-text">Paulo Henrique // System Online</span>
                 <h1>Engenheiro de <br><span class="highlight">Software & Front-End</span></h1>
-                <p class="hero-desc">Especialista em interfaces de alta performance, UX imersiva e arquitetura
-                    escalável.</p>
+                <p class="hero-desc">Especializado na construção de interfaces de alta performance, com UX imersiva e arquitetura escalável, criando soluções digitais modernas, acessíveis e centradas no usuário.</p>
                 <div class="cta-group">
                     <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> Ver Projetos</a>
                     <a href="#contact" class="btn-secondary"><i class="fas fa-terminal"></i> Contato</a>
@@ -204,7 +80,11 @@
                 <h2 class="section-title">Sobre o Desenvolvedor</h2>
             </div>
             <div class="about-grid">
-                <div class="hero-image-container"><img src="./src/assets/images/perfil/paulohenrique.jpeg" alt="Foto de perfil de  Paulo Henrique"></div>
+                <!-- Wrapper centralizado para a foto menor -->
+                <div class="about-image-wrapper">
+                    <img src="./src/assets/images/perfil/paulohenrique.jpeg" alt="Foto de perfil de Paulo Henrique">
+                </div>
+                
                 <div class="about-text-content">
                     <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
                         Graduando em Engenharia de Software e pós-graduando em Front-End. Especialista em interfaces
@@ -215,8 +95,7 @@
                         <span class="tech-tag">Pós Front-End</span>
                         <span class="tech-tag">Top 50 FullStack</span>
                     </div>
-                    <div class="skills-grid"
-                        style="grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 30px;">
+                    <div class="about-stats-grid">
                         <div class="skill-card">
                             <h3 style="color: var(--accent-color);">30%</h3>
                             <p>Performance</p>
@@ -244,119 +123,311 @@
             <!-- Frontend Core -->
             <h3 class="tech-category-title">Frontend Core</h3>
             <div class="skills-grid">
-                <div class="skill-card"><i class="devicon-react-original colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-react-original colored skill-icon"></i>
                     <div class="skill-name">React</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 90%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-typescript-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-typescript-plain colored skill-icon"></i>
                     <div class="skill-name">TypeScript</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-javascript-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-javascript-plain colored skill-icon"></i>
                     <div class="skill-name">JavaScript</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-tailwindcss-original colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-tailwindcss-original colored skill-icon"></i>
                     <div class="skill-name">Tailwind</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 80%;"></div></div>
                 </div>
             </div>
 
             <!-- Web Essentials -->
             <h3 class="tech-category-title">Web Essentials</h3>
             <div class="skills-grid">
-                <div class="skill-card"><i class="devicon-html5-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-html5-plain colored skill-icon"></i>
                     <div class="skill-name">HTML5</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 98%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-css3-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-css3-plain colored skill-icon"></i>
                     <div class="skill-name">CSS3</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-sass-original colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-sass-original colored skill-icon"></i>
                     <div class="skill-name">SASS</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 75%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-less-plain-wordmark colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-less-plain-wordmark colored skill-icon"></i>
                     <div class="skill-name">LESS</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 70%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-nextjs-plain skill-icon" style="color:white"></i>
+                <div class="skill-card">
+                    <i class="devicon-nextjs-plain skill-icon" style="color:white"></i>
                     <div class="skill-name">Next.js</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 80%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-bootstrap-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-bootstrap-plain colored skill-icon"></i>
                     <div class="skill-name">Bootstrap</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%;"></div></div>
                 </div>
             </div>
 
             <!-- Tools & DevOps -->
             <h3 class="tech-category-title">Tools & DevOps</h3>
             <div class="skills-grid">
-                <div class="skill-card"><i class="devicon-git-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-git-plain colored skill-icon"></i>
                     <div class="skill-name">Git</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 88%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-vitejs-plain colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-vitejs-plain colored skill-icon"></i>
                     <div class="skill-name">Vite</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 82%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-github-original colored skill-icon"></i>
+                <div class="skill-card">
+                    <i class="devicon-github-original colored skill-icon"></i>
                     <div class="skill-name">GitHub</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 90%;"></div></div>
                 </div>
-                <div class="skill-card"><i class="devicon-vercel-original skill-icon" style="color:white"></i>
+                <div class="skill-card">
+                    <i class="devicon-vercel-original skill-icon" style="color:white"></i>
                     <div class="skill-name">Vercel</div>
-                </div>
-            </div>
-
-            <!-- Dev Environment -->
-            <h3 class="tech-category-title">Development Environment</h3>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="devicon-grunt-plain colored skill-icon"></i>
-                    <div class="skill-name">Grunt</div>
-                </div>
-                <div class="skill-card"><i class="devicon-gulp-plain colored skill-icon"></i>
-                    <div class="skill-name">Gulp</div>
-                </div>
-                <div class="skill-card"><i class="devicon-npm-original-wordmark colored skill-icon"></i>
-                    <div class="skill-name">NPM</div>
-                </div>
-                <div class="skill-card"><i class="devicon-vscode-plain colored skill-icon"></i>
-                    <div class="skill-name">VS Code</div>
+                    <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%;"></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section (Mantido Completo) -->
+        <!-- Projects Section -->
         <section id="projects">
             <div class="section-header"><span class="section-subtitle">Casos</span>
                 <h2 class="section-title">Missões</h2>
             </div>
             <div class="projects-grid">
-                <!-- Adicionando os principais projetos para garantir visibilidade -->
+                <!-- Hack Labs -->
                 <div class="project-card">
                     <img src="./src/assets/images/projects/hacker-app.png" class="project-image">
                     <div class="project-info">
                         <h3 class="project-title">Hack Labs</h3>
-                        <p class="project-desc">Segurança da Informação.</p><a
-                            href="https://plataforma-hacker.vercel.app/" class="project-link">Deploy</a>
+                        <p class="project-desc">Segurança da Informação.</p>
+                        <a href="https://plataforma-hacker.vercel.app/" class="project-link">Deploy</a>
                     </div>
                 </div>
+                <!-- SyntaxWear -->
                 <div class="project-card">
                     <img src="./src/assets/images/projects/cardresponsivo.png" class="project-image">
-
                     <div class="project-info">
                         <h3 class="project-title">SyntaxWear</h3>
-                        <p class="project-desc">E-commerce Moderno.</p><a href="https://syntax-wear-app.vercel.app/"
-                            class="project-link">Deploy</a>
+                        <p class="project-desc">E-commerce Moderno.</p>
+                        <a href="https://syntax-wear-app.vercel.app/" class="project-link">Deploy</a>
                     </div>
                 </div>
+                <!-- Kanban Task -->
                 <div class="project-card">
                     <img src="./src/assets/images/projects/kabancard.png" class="project-image">
                     <div class="project-info">
                         <h3 class="project-title">Kanban Task</h3>
-                        <p class="project-desc">Gestão de tarefas.</p><a
-                            href="https://todo-list-app-indol-nine.vercel.app/" class="project-link">Deploy</a>
+                        <p class="project-desc">Gestão de tarefas.</p>
+                        <a href="https://todo-list-app-indol-nine.vercel.app/" class="project-link">Deploy</a>
                     </div>
                 </div>
+                <!-- Disney Clone -->
                 <div class="project-card">
-                    <img src="./src/assets/images/projects/diney+.png" class="project-image">
+                    <img src="./src/assets/images/projects/disney-clone.png" class="project-image">
                     <div class="project-info">
-                        <h3 class="project-title">Disney Clone</h3>
-                        <p class="project-desc">Streaming UI.</p><a href="https://clone-lime-iota.vercel.app/"
-                            class="project-link">Deploy</a>
+                        <h3 class="project-title">Disney+ Clone</h3>
+                        <p class="project-desc">Streaming UI Clone.</p>
+                        <a href="https://clone-lime-iota.vercel.app/" class="project-link">Deploy</a>
                     </div>
                 </div>
-                <!-- ... outros projetos seguem a mesma estrutura ... -->
+                <!-- Advocacia -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/advocacia.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Advocacia</h3>
+                        <p class="project-desc">Landing Page para Advogados.</p>
+                        <a href="#" class="project-link">Privado</a>
+                    </div>
+                </div>
+                <!-- App Kanban -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/app-kanban.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Kanban App</h3>
+                        <p class="project-desc">Organização Ágil.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Bot -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/bot.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Discord Bot</h3>
+                        <p class="project-desc">Automação de Servidores.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Botflix -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/botflix.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Botflix</h3>
+                        <p class="project-desc">Plataforma de Vídeos.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Busca CEP -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/buscacep.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Busca CEP</h3>
+                        <p class="project-desc">Utilitário de Endereços.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Cafeteria -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/cafeteria.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Coffee Shop</h3>
+                        <p class="project-desc">Site para Cafeteria.</p>
+                        <a href="#" class="project-link">Deploy</a>
+                    </div>
+                </div>
+                <!-- Gibhi -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/gibhi.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Gibhi</h3>
+                        <p class="project-desc">Projeto Frontend.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Hero Landing -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/hero.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Hero Section</h3>
+                        <p class="project-desc">Design de Impacto.</p>
+                        <a href="#" class="project-link">Deploy</a>
+                    </div>
+                </div>
+                <!-- Notebook Project -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/imagem-projeto-notebook.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Tech Note</h3>
+                        <p class="project-desc">Apresentação de Produto.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Pokedex -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/pokedex.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Pokedex</h3>
+                        <p class="project-desc">Consumo de API Pokemon.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Pokedex MapDev -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/pokedexmapdev.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Pokedex v2</h3>
+                        <p class="project-desc">Projeto Educacional.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Mario Fan -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/marioFan.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Mario Fan Page</h3>
+                        <p class="project-desc">Homenagem ao clássico.</p>
+                        <a href="#" class="project-link">Deploy</a>
+                    </div>
+                </div>
+                <!-- Pousada -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/pousada.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Pousada</h3>
+                        <p class="project-desc">Site Institucional.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- Psicologia -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/psicologia.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Psicologia</h3>
+                        <p class="project-desc">Landing Page Profissional.</p>
+                        <a href="#" class="project-link">Privado</a>
+                    </div>
+                </div>
+                <!-- SyntaxWear 2 -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/sytaxwear.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">SyntaxWear v2</h3>
+                        <p class="project-desc">E-commerce Fashion.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- giInsight -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/cadsSites/giInsight.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">giInsight</h3>
+                        <p class="project-desc">Business Intelligence.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- kare -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/cadsSites/kare.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Kare App</h3>
+                        <p class="project-desc">Health & Wellness.</p>
+                        <a href="#" class="project-link">Deploy</a>
+                    </div>
+                </div>
+                <!-- Order -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/cadsSites/Order.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Order System</h3>
+                        <p class="project-desc">Gestão de Pedidos.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <!-- PantoCard -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/cadsSites/PantoCard.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">PantoCard</h3>
+                        <p class="project-desc">Soluções em Cartão.</p>
+                        <a href="#" class="project-link">Deploy</a>
+                    </div>
+                </div>
+                <!-- shop.co -->
+                <div class="project-card">
+                    <img src="./src/assets/images/projects/cadsSites/shop.co.png" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Shop.co</h3>
+                        <p class="project-desc">E-commerce Fashion.</p>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -368,55 +439,31 @@
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3
-                        style="color: var(--text-primary); margin-bottom: 25px; font-family: var(--font-display); letter-spacing: 2px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 25px; font-family: var(--font-display); letter-spacing: 2px;">
                         <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i> PROTOCOLO DE CONEXÃO
                     </h3>
-
                     <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">
-                        Seja para uma missão de desenvolvimento, uma parceria tecnológica ou apenas para expandir a
-                        rede, as portas da Wayne Tower estão abertas.
+                        As portas da Wayne Tower estão abertas. Transmita sua mensagem.
                     </p>
-
                     <div class="contact-buttons-grid" style="display: flex; flex-direction: column; gap: 20px;">
-                        <!-- Botão E-mail -->
-                        <a href="mailto:paulohenriqueferreirafranca2@gmail.com" class="btn-primary"
-                            style="justify-content: center; width: 100%;">
+                        <a href="mailto:paulohenriqueferreirafranca2@gmail.com" class="btn-primary" style="justify-content: center; width: 100%;">
                             <i class="fas fa-envelope"></i> Transmitir E-mail
                         </a>
-
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <!-- Botão LinkedIn -->
-                            <a href="https://www.linkedin.com/in/paulohenriquefranca/" target="_blank"
-                                class="btn-secondary" style="justify-content: center;">
+                            <a href="https://www.linkedin.com/in/paulohenriquefranca/" target="_blank" class="btn-secondary" style="justify-content: center;">
                                 <i class="fab fa-linkedin-in"></i> LinkedIn
                             </a>
-                            <!-- Botão GitHub -->
-                            <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-secondary"
-                                style="justify-content: center;">
+                            <a href="https://github.com/PauloHenrique993940" target="_blank" class="btn-secondary" style="justify-content: center;">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
-
-                        <!-- Botão WhatsApp (Opcional, mas comum em portfólios) -->
-                        <a href="https://wa.me/5571993061316" target="_blank" class="btn-secondary"
-                            style="justify-content: center; border-color: #25D366; color: #25D366;">
-                            <i class="fab fa-whatsapp"></i> Direct via WhatsApp
-                        </a>
                     </div>
                 </div>
-
-                <!-- Formulário de Mensagem Estilizado -->
-                <form class="contact-form"
-                    style="background: rgba(255,255,255,0.02); padding: 30px; border: 1px solid var(--glass-border); border-radius: 4px;">
-                    <h4
-                        style="font-family: var(--font-display); color: var(--tech-blue); margin-bottom: 20px; text-transform: uppercase;">
-                        Enviar Dados da Missão</h4>
+                <form id="contact-form" class="contact-form">
                     <input type="text" placeholder="CODENAME (NOME)" required>
                     <input type="email" placeholder="ENDEREÇO DE REDE (EMAIL)" required>
                     <textarea rows="4" placeholder="RELATÓRIO DE MISSÃO (SUA MENSAGEM)" required></textarea>
-                    <button type="submit" class="btn-primary"
-                        style="width: 100%; justify-content: center; cursor: pointer; border: none;">
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; cursor: pointer; border: none;">
                         <i class="fas fa-paper-plane"></i> Enviar Agora
                     </button>
                 </form>
@@ -424,6 +471,7 @@
         </section>
     </main>
 
+    <!-- Scripts em ordem correta -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./src/js/batman-core.js"></script>
