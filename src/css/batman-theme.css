@@ -504,36 +504,29 @@ section {
 }
 
 .bat-logo-placeholder i {
-    font-size: clamp(3rem, 10vw, 5rem) !important;
+    font-size: 5rem !important;
 }
 
 /* intro-content */
 .intro-content {
     text-align: center;
     padding: 20px;
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     z-index: 10001;
 }
 
 .intro-img {
     width: 380px;
-    max-width: 90vw;
-    height: auto;
     position: relative;
     display: block;
     margin: 0 auto;
 
-    /* Corte diagonal estilo Batman - Versão responsiva com porcentagens */
-    clip-path: polygon(10% 0,
+    /* Corte diagonal estilo Batman - Original */
+    clip-path: polygon(40px 0,
             100% 0,
-            100% 75%,
-            75% 100%,
+            100% calc(100% - 100px),
+            calc(100% - 100px) 100%,
             0 100%,
-            0 25%);
+            0 100px);
 
     /* Borda amarela tecnológica */
     border: 2px solid #ffc400;
@@ -547,7 +540,7 @@ section {
 }
 
 .intro-text {
-    font-size: clamp(1.2rem, 5vw, 2.2rem);
+    font-size: 2.2rem;
     font-family: var(--font-display);
     margin: 20px 0 10px;
     color: #fff;
@@ -558,14 +551,40 @@ section {
 .intro-subtext-destaque {
     color: var(--accent-color);
     font-weight: 700;
-    font-size: clamp(1rem, 4vw, 1.4rem);
+    font-size: 1.4rem;
     margin-bottom: 8px;
     letter-spacing: 1px;
 }
 
 .intro-subtext {
     color: var(--text-secondary);
-    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-size: 1rem;
     margin-bottom: 30px;
     letter-spacing: 2px;
+}
+
+/* Responsividade específica para o Bat-Sinal em telas pequenas */
+@media (max-width: 480px) {
+    .bat-logo-placeholder i {
+        font-size: 3.5rem !important;
+    }
+    
+    .intro-img {
+        width: 100%;
+        max-width: 300px;
+        /* Em telas pequenas, usamos porcentagem para o clip-path não quebrar */
+        clip-path: polygon(10% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+    }
+
+    .intro-text {
+        font-size: 1.4rem;
+    }
+
+    .intro-subtext-destaque {
+        font-size: 1.1rem;
+    }
+
+    .intro-subtext {
+        font-size: 0.85rem;
+    }
 }
