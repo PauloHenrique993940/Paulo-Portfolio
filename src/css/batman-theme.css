@@ -601,10 +601,9 @@ section {
     }
 
     .intro-text {
-        font-size: 3rem;
+        font-size: 2rem;
+        text-align: center;
     }
     
-    .hero h1 {
-        font-size: 4.5rem;
-    }
+    
 }
