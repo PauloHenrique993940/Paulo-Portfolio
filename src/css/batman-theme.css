@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: transparent;
     color: var(--text-primary);
     font-family: var(--font-main);
     overflow-x: hidden;
@@ -65,11 +65,12 @@ body {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
+    background-color: var(--bg-color);
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
-    z-index: -1;
+    z-index: -2;
     mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
 }
 
@@ -78,7 +79,7 @@ body {
     top: 0; left: 0;
     width: 100%; height: 100%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 1;
     pointer-events: none;
 }
 
@@ -606,4 +607,21 @@ section {
     }
     
     
+}
+
+/* Efeitos 3D - Vanilla Tilt */
+.project-card, .skill-card {
+    transform-style: preserve-3d;
+}
+
+.project-info {
+    transform: translateZ(40px);
+}
+
+.project-image {
+    transform: translateZ(20px);
+}
+
+.skill-icon, .skill-name, .proficiency-bar {
+    transform: translateZ(30px);
 }
